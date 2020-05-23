@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPack.API", "PowerPack.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Identity.API\Identity.API.csproj", "{CD3D7285-B81E-4CE6-90C4-00A7F202F98B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPackOnline.Web", "PowerPackOnline.Web\PowerPackOnline.Web.csproj", "{6EE954C5-4915-49C9-9CE2-496266AEF45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{CD3D7285-B81E-4CE6-90C4-00A7F202F98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD3D7285-B81E-4CE6-90C4-00A7F202F98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD3D7285-B81E-4CE6-90C4-00A7F202F98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE954C5-4915-49C9-9CE2-496266AEF45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE954C5-4915-49C9-9CE2-496266AEF45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE954C5-4915-49C9-9CE2-496266AEF45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE954C5-4915-49C9-9CE2-496266AEF45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{3F9FA5E4-1238-4DEA-A7E8-1CC8608532C5} = {5601ECFF-B3F2-4D40-A6FE-26A784591275}
 		{9666DF1B-3017-4834-80DC-070AC1A53C8F} = {5601ECFF-B3F2-4D40-A6FE-26A784591275}
 		{CD3D7285-B81E-4CE6-90C4-00A7F202F98B} = {3F9FA5E4-1238-4DEA-A7E8-1CC8608532C5}
+		{6EE954C5-4915-49C9-9CE2-496266AEF45F} = {B20369F5-97C0-42AE-B148-F6979AC0C331}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF937AE9-ACE7-4C9B-BA5D-06BE5FDDE585}
