@@ -1,0 +1,9 @@
+D:\TFS2020\PowerPackOnline\DatabaseConnection\bin\Debug\netcoreapp2.2\DatabaseConnection.deps.json
+D:\TFS2020\PowerPackOnline\DatabaseConnection\bin\Debug\netcoreapp2.2\DatabaseConnection.dll
+D:\TFS2020\PowerPackOnline\DatabaseConnection\bin\Debug\netcoreapp2.2\DatabaseConnection.pdb
+D:\TFS2020\PowerPackOnline\DatabaseConnection\obj\Debug\netcoreapp2.2\DatabaseConnection.csprojAssemblyReference.cache
+D:\TFS2020\PowerPackOnline\DatabaseConnection\obj\Debug\netcoreapp2.2\DatabaseConnection.csproj.CoreCompileInputs.cache
+D:\TFS2020\PowerPackOnline\DatabaseConnection\obj\Debug\netcoreapp2.2\DatabaseConnection.AssemblyInfoInputs.cache
+D:\TFS2020\PowerPackOnline\DatabaseConnection\obj\Debug\netcoreapp2.2\DatabaseConnection.AssemblyInfo.cs
+D:\TFS2020\PowerPackOnline\DatabaseConnection\obj\Debug\netcoreapp2.2\DatabaseConnection.dll
+D:\TFS2020\PowerPackOnline\DatabaseConnection\obj\Debug\netcoreapp2.2\DatabaseConnection.pdb

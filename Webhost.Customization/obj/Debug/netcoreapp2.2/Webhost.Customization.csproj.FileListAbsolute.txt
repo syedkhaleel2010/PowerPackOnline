@@ -1,0 +1,9 @@
+D:\TFS2020\PowerPackOnline\Webhost.Customization\bin\Debug\netcoreapp2.2\Webhost.Customization.deps.json
+D:\TFS2020\PowerPackOnline\Webhost.Customization\bin\Debug\netcoreapp2.2\Webhost.Customization.dll
+D:\TFS2020\PowerPackOnline\Webhost.Customization\bin\Debug\netcoreapp2.2\Webhost.Customization.pdb
+D:\TFS2020\PowerPackOnline\Webhost.Customization\obj\Debug\netcoreapp2.2\Webhost.Customization.csproj.CoreCompileInputs.cache
+D:\TFS2020\PowerPackOnline\Webhost.Customization\obj\Debug\netcoreapp2.2\Webhost.Customization.AssemblyInfoInputs.cache
+D:\TFS2020\PowerPackOnline\Webhost.Customization\obj\Debug\netcoreapp2.2\Webhost.Customization.AssemblyInfo.cs
+D:\TFS2020\PowerPackOnline\Webhost.Customization\obj\Debug\netcoreapp2.2\Webhost.Customization.dll
+D:\TFS2020\PowerPackOnline\Webhost.Customization\obj\Debug\netcoreapp2.2\Webhost.Customization.pdb
+D:\TFS2020\PowerPackOnline\Webhost.Customization\obj\Debug\netcoreapp2.2\Webhost.Customization.csprojAssemblyReference.cache
