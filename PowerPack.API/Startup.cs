@@ -293,9 +293,9 @@ namespace PowerPack.API
         //            options.DescribeAllEnumsAsStrings();
         //            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
         //            {
-        //                Title = "SIMS Services 2.0 - SIMS HTTP API",
+        //                Title = "PowerPack Services 2.0 - PowerPack HTTP API",
         //                Version = "v1",
-        //                Description = "The SIMS services HTTP API.",
+        //                Description = "The PowerPack services HTTP API.",
         //                TermsOfService = "Terms Of Service"
         //            });
 
@@ -307,7 +307,7 @@ namespace PowerPack.API
         //                TokenUrl = $"{configuration.GetValue<string>("IdentityUrlExternal")}/connect/token",
         //                Scopes = new Dictionary<string, string>()
         //                {
-        //                    { "PowerPack", "SIMS Service API" }
+        //                    { "PowerPack", "PowerPack Service API" }
         //                }
         //            });
 

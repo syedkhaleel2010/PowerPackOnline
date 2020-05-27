@@ -75,13 +75,7 @@ namespace PowerPack.Common.Helpers
             set { base["PowerPackApiUrl"] = value; }
         }
 
-        [ConfigurationProperty("SIMSApiUrl", IsRequired = true)]
-        public string SIMSApiUrl
-        {
-            get { return Convert.ToString(base["SIMSApiUrl"]); }
-            set { base["SIMSApiUrl"] = value; }
-        }
-
+       
         [ConfigurationProperty("AdminHomePageUrl", IsRequired = true)]
         public string AdminHomePageUrl
         {
@@ -95,11 +89,11 @@ namespace PowerPack.Common.Helpers
             get { return Convert.ToString(base["VLEHomePageUrl"]); }
             set { base["VLEHomePageUrl"] = value; }
         }
-        [ConfigurationProperty("SIMSHomePageUrl", IsRequired = true)]
-        public string SIMSHomePageUrl
+        [ConfigurationProperty("PowerPackHomePageUrl", IsRequired = true)]
+        public string PowerPackHomePageUrl
         {
-            get { return Convert.ToString(base["SIMSHomePageUrl"]); }
-            set { base["SIMSHomePageUrl"] = value; }
+            get { return Convert.ToString(base["PowerPackHomePageUrl"]); }
+            set { base["PowerPackHomePageUrl"] = value; }
         }
        
         /// <summary>

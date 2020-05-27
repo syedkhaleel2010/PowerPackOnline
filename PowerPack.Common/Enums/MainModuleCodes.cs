@@ -12,8 +12,8 @@ namespace PowerPack.Common.Enums
         ReportList,
         [StringValue("VLE")]
         Classroom,
-        [StringValue("SIMS")]
-        SIMS,
+        [StringValue("PowerPack")]
+        PowerPack,
         [StringValue("HSEAdmin")]
         HSEAdmin
 
