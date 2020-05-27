@@ -34,6 +34,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{70598E5F-10F7-4B38-85D1-6D05FB013EB3}"
 	ProjectSection(SolutionItems) = preProject
 		Asish.sql = Asish.sql
+		CodeSnippets.txt = CodeSnippets.txt
 		Khaleel.sql = Khaleel.sql
 	EndProjectSection
 EndProject
