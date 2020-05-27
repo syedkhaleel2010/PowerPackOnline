@@ -45,10 +45,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.1.2.1389, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,9 +133,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\API.cs" />
+    <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Common\CommonService.cs" />
+    <Compile Include="Services\Common\Contracts\ICommonService.cs" />
+    <Compile Include="Services\Common\Contracts\IErrorLoggerService.cs" />
+    <Compile Include="Services\Common\Contracts\IModuleStructureService.cs" />
+    <Compile Include="Services\Common\Contracts\ISelectListService.cs" />
+    <Compile Include="Services\Common\ErrorLoggerService.cs" />
+    <Compile Include="Services\Common\ModuleStructureService.cs" />
+    <Compile Include="Services\Common\SelectListService.cs" />
+    <Compile Include="Services\Users\Contracts\ILogInUserService.cs" />
+    <Compile Include="Services\Users\Contracts\IUserLoginLogService.cs" />
+    <Compile Include="Services\Users\Contracts\IUserService.cs" />
+    <Compile Include="Services\Users\LogInUserService.cs" />
+    <Compile Include="Services\Users\UserLoginLogService.cs" />
+    <Compile Include="Services\Users\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -179,6 +205,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PowerPack.Common\PowerPack.Common.csproj">
+      <Project>{37603609-0267-4c1e-bdf8-1dc6fab67827}</Project>
+      <Name>PowerPack.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerPack.Models\PowerPack.Models.csproj">
+      <Project>{ce5bda25-c20b-4f2d-b896-453b63748762}</Project>
+      <Name>PowerPack.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
