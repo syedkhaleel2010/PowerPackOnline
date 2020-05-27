@@ -1,13 +1,13 @@
-﻿using SIMS.API.Exceptions;
+﻿using PowerPack.API.Exceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using SIMS.API.Middlewares;
+using PowerPack.API.Middlewares;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Middlewares
+namespace PowerPack.API.Middlewares
 {
     public class FailingStartupFilter : IStartupFilter
     {

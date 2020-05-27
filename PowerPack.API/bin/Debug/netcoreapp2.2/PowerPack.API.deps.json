@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "e2a34552f8629d8dcc49523ebce1ac966b5292c6"
+    "signature": ""
   },
   "compilationOptions": {
     "defines": [
@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP2_2"
     ],
-    "languageVersion": "",
+    "languageVersion": "7.3",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -737,15 +737,7 @@
       },
       "PowerPack.Common/1.0.0": {
         "dependencies": {
-          "PowerPack.Models": "1.0.0",
-          "System.Web.Mvc": "5.2.4.0",
-          "NLog": "4.0.0.0",
-          "System.Web.Optimization": "1.1.0.0",
-          "System.Web.WebPages": "3.0.0.0",
-          "System.Web.WebPages.Razor": "3.0.0.0",
-          "System.Web.Razor": "3.0.0.0",
-          "Microsoft.Web.Infrastructure": "1.0.0.0",
-          "System.Web.WebPages.Deployment": "3.0.0.0"
+          "PowerPack.Models": "1.0.0"
         },
         "runtime": {
           "PowerPack.Common.dll": {}
@@ -776,7 +768,7 @@
           "Webhost.Customization.dll": {}
         }
       },
-      "System.Web.Mvc.Reference/5.2.4.0": {
+      "System.Web.Mvc/5.2.4.0": {
         "runtime": {
           "System.Web.Mvc.dll": {
             "assemblyVersion": "5.2.4.0",
@@ -784,7 +776,7 @@
           }
         }
       },
-      "NLog.Reference/4.0.0.0": {
+      "NLog/4.0.0.0": {
         "runtime": {
           "NLog.dll": {
             "assemblyVersion": "4.0.0.0",
@@ -792,7 +784,7 @@
           }
         }
       },
-      "System.Web.Optimization.Reference/1.1.0.0": {
+      "System.Web.Optimization/1.1.0.0": {
         "runtime": {
           "System.Web.Optimization.dll": {
             "assemblyVersion": "1.1.0.0",
@@ -800,7 +792,7 @@
           }
         }
       },
-      "System.Web.WebPages.Reference/3.0.0.0": {
+      "System.Web.WebPages/3.0.0.0": {
         "runtime": {
           "System.Web.WebPages.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -808,7 +800,7 @@
           }
         }
       },
-      "System.Web.WebPages.Razor.Reference/3.0.0.0": {
+      "System.Web.WebPages.Razor/3.0.0.0": {
         "runtime": {
           "System.Web.WebPages.Razor.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -816,7 +808,7 @@
           }
         }
       },
-      "System.Web.Razor.Reference/3.0.0.0": {
+      "System.Web.Razor/3.0.0.0": {
         "runtime": {
           "System.Web.Razor.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -824,7 +816,7 @@
           }
         }
       },
-      "Microsoft.Web.Infrastructure.Reference/1.0.0.0": {
+      "Microsoft.Web.Infrastructure/1.0.0.0": {
         "runtime": {
           "Microsoft.Web.Infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -832,7 +824,7 @@
           }
         }
       },
-      "System.Web.WebPages.Deployment.Reference/3.0.0.0": {
+      "System.Web.WebPages.Deployment/3.0.0.0": {
         "runtime": {
           "System.Web.WebPages.Deployment.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -4278,42 +4270,42 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Web.Mvc.Reference/5.2.4.0": {
+    "System.Web.Mvc/5.2.4.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "NLog.Reference/4.0.0.0": {
+    "NLog/4.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Web.Optimization.Reference/1.1.0.0": {
+    "System.Web.Optimization/1.1.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Web.WebPages.Reference/3.0.0.0": {
+    "System.Web.WebPages/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Web.WebPages.Razor.Reference/3.0.0.0": {
+    "System.Web.WebPages.Razor/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Web.Razor.Reference/3.0.0.0": {
+    "System.Web.Razor/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Web.Infrastructure.Reference/1.0.0.0": {
+    "Microsoft.Web.Infrastructure/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Web.WebPages.Deployment.Reference/3.0.0.0": {
+    "System.Web.WebPages.Deployment/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using SIMS.API.Middlewares;
+using PowerPack.API.Middlewares;
 using System;
 
-namespace SIMS.API.Exceptions
+namespace PowerPack.API.Exceptions
 {
     public static class FailingMiddlewareAppBuilderExtensions
     {

@@ -37,3 +37,7 @@ D:\TFS2020\PowerPackOnline\PowerPack.API\obj\Debug\netcoreapp2.2\PowerPack.API.R
 D:\TFS2020\PowerPackOnline\PowerPack.API\obj\Debug\netcoreapp2.2\PowerPack.API.csproj.CopyComplete
 D:\TFS2020\PowerPackOnline\PowerPack.API\obj\Debug\netcoreapp2.2\PowerPack.API.dll
 D:\TFS2020\PowerPackOnline\PowerPack.API\obj\Debug\netcoreapp2.2\PowerPack.API.pdb
+D:\TFS2020\PowerPackOnline\PowerPack.API\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\TFS2020\PowerPackOnline\PowerPack.API\bin\Debug\netcoreapp2.2\appsettings.json
+D:\TFS2020\PowerPackOnline\PowerPack.API\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+D:\TFS2020\PowerPackOnline\PowerPack.API\obj\Debug\netcoreapp2.2\PowerPack.API.genruntimeconfig.cache

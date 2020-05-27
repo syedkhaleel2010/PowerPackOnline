@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Models.CertificateBuilder
+namespace PowerPack.API.Models.CertificateBuilder
 {
     public class Template
     {

@@ -1,11 +1,11 @@
-﻿using SIMS.API.Helpers;
+﻿using PowerPack.API.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Models
+namespace PowerPack.API.Models
 {
     public class Assessment
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace SIMS.API.ActionResults
+namespace PowerPack.API.ActionResults
 {
     public class InternalServerErrorObjectResult : ObjectResult
     {

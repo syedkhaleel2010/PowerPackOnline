@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-using SIMS.API.ActionResults;
+using PowerPack.API.ActionResults;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 
-namespace SIMS.API.Filters
+namespace PowerPack.API.Filters
 {
     public class HttpGlobalExceptionFilter : IExceptionFilter
     {

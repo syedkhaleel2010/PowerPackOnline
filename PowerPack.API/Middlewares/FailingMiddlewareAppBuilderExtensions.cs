@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using System;
 
-namespace SIMS.API.Middlewares
+namespace PowerPack.API.Middlewares
 {
     public static class FailingMiddlewareAppBuilderExtensions
     {

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 
-namespace SIMS.API.Models
+namespace PowerPack.API.Models
 {
     public class AssessmentTerm
     {

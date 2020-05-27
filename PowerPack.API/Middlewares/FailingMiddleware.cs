@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Middlewares
+namespace PowerPack.API.Middlewares
 {
     public class FailingMiddleware
     {

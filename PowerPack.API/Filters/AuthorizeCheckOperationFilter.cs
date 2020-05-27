@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Filters
+namespace PowerPack.API.Filters
 {
     public class AuthorizeCheckOperationFilter : IOperationFilter
     {

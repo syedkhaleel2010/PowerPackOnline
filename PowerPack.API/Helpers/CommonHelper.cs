@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Helpers
+namespace PowerPack.API.Helpers
 {
     public static class CommonHelper
     {

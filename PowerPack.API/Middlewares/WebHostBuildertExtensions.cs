@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace SIMS.API.Middlewares
+namespace PowerPack.API.Middlewares
 {
     public static class WebHostBuildertExtensions
     {

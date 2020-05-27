@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Models
+namespace PowerPack.API.Models
 {
     #region Made By Dhanaji
     public class UploadObjectiveModel
