@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A93546AF-2F01-4932-AB6D-758D1490EB10}"
 EndProject
@@ -30,6 +30,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Identity.API\Identity.API.csproj", "{CD3D7285-B81E-4CE6-90C4-00A7F202F98B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPackOnline.Web", "PowerPackOnline.Web\PowerPackOnline.Web.csproj", "{6EE954C5-4915-49C9-9CE2-496266AEF45F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{70598E5F-10F7-4B38-85D1-6D05FB013EB3}"
+	ProjectSection(SolutionItems) = preProject
+		Asish.sql = Asish.sql
+		Khaleel.sql = Khaleel.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,7 @@ Global
 		{9666DF1B-3017-4834-80DC-070AC1A53C8F} = {5601ECFF-B3F2-4D40-A6FE-26A784591275}
 		{CD3D7285-B81E-4CE6-90C4-00A7F202F98B} = {3F9FA5E4-1238-4DEA-A7E8-1CC8608532C5}
 		{6EE954C5-4915-49C9-9CE2-496266AEF45F} = {B20369F5-97C0-42AE-B148-F6979AC0C331}
+		{70598E5F-10F7-4B38-85D1-6D05FB013EB3} = {A93546AF-2F01-4932-AB6D-758D1490EB10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF937AE9-ACE7-4C9B-BA5D-06BE5FDDE585}
