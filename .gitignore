@@ -98,6 +98,7 @@ StyleCopReport.xml
 *.scc
 
 /obj/Debug
+/bin
 
 # Chutzpah Test files
 _Chutzpah*
