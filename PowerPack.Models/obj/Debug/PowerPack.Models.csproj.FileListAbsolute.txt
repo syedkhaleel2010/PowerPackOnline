@@ -3,3 +3,4 @@ D:\TFS2020\PowerPackOnline\PowerPack.Models\bin\Debug\PowerPack.Models.pdb
 D:\TFS2020\PowerPackOnline\PowerPack.Models\obj\Debug\PowerPack.Models.csproj.CoreCompileInputs.cache
 D:\TFS2020\PowerPackOnline\PowerPack.Models\obj\Debug\PowerPack.Models.dll
 D:\TFS2020\PowerPackOnline\PowerPack.Models\obj\Debug\PowerPack.Models.pdb
+D:\TFS2020\PowerPackOnline\PowerPack.Models\obj\Debug\PowerPack.Models.csprojAssemblyReference.cache
