@@ -79,7 +79,7 @@ initially proposed by Roy Thomas Fielding in his 2000 Ph.D. dissertation.
 
 
 www.ManzoorTheTrainer.com
-
+ 
 What Is RESTful Web APIs?
 
 ● Web service APIs that adhere to the REST architectural constraints.
@@ -94,3 +94,15 @@ Facebook, Amazon Product, Advertising, etc.,
 Credit : Manzoorthetrainer.com
 ---------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------
+  $("#myButton").click(function () {
+                $.ajax({
+                    url: 'http://localhost:65256/api/studinfo',
+                    type: 'GET',
+                    success: function (result) {
+                        console.log(result);
+                    }
+                });
+            });
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+

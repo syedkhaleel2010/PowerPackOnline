@@ -41,23 +41,29 @@ namespace PowerPack.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen(c => { c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "Power Pack API", Version = "1.0" });
+            services.AddCors();
+            services.AddMvc();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "Power Pack API", Version = "1.0" });
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-            public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
             {
-                if (env.IsDevelopment())
-                {
-                    app.UseDeveloperExceptionPage();
-                }
+                app.UseDeveloperExceptionPage();
+            }
 
-                app.UseHttpsRedirection();
+            app.UseCors(opt=>opt.WithOrigins("http://localhost:65256"));
 
-                app.UseRouting();
+            app.UseHttpsRedirection();
 
-                app.UseAuthorization();
+            app.UseRouting();
+
+            app.UseAuthorization();
 
             var pathBase = Configuration["PATH_BASE"];
 
@@ -66,7 +72,6 @@ namespace PowerPack.API
                 loggerFactory.CreateLogger<Startup>().LogDebug("Using PATH BASE '{pathBase}'", pathBase);
                 app.UsePathBase(pathBase);
             }
-
 
             app.UseSwagger()
              .UseSwaggerUI(c =>
@@ -78,8 +83,8 @@ namespace PowerPack.API
                 {
                     endpoints.MapControllers();
                 });
-            }
-        
+        }
+
         //    public Startup(IConfiguration configuration)
         //    {
         //        Configuration = configuration;

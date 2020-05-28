@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PowerPack.API.Areas
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
+    [ApiController]
     public class LoginController : Controller
     {
         // GET: api/<controller>
