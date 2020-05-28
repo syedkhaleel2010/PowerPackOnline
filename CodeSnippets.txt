@@ -105,4 +105,35 @@ Credit : Manzoorthetrainer.com
             });
 -------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------
+What is Autofac ?
+
+Autofac implments IoC Pattern also Dependency Injection Resolver.
+
+Autofac is an IoC container for Microsoft .NET. It manages the dependencies between classes so that applications stay easy 
+to change as they grow in size and complexity. This is achieved by treating regular .NET classes as components.
+
+Emphasis theirs.
+
+So Autofac provides you with easy inversion of control, with the idea that this will keep your 
+dependencies manageable and your code clean as it grows.  Interesting, given its good percentile scores in my research.
+
+
+The Dependency Injection pattern, also known as Inversion of Control, is one of the most popular design paradigms today. 
+It enables us to write loosely coupled code, it eliminates tight coupling between objects to make both the objects 
+and applications that use them more flexible, reusable, easier to test, and makes it possible to change 
+them at runtime and compile time. 
+
+
+for more Info : https://www.codeproject.com/Articles/690391/Dependency-Injection-Pattern-with-Autofac
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+What is Unity Container?
+
+Unity container is an open source IoC container for .NET applications supported by Microsoft. 
+It is a lightweight and extensible IoC container.
+
+for more Info : https://www.codeproject.com/Articles/1163016/Using-Unity-Framework-in-ASP-NET-MVC
+
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
