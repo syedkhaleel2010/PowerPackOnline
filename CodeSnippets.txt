@@ -156,3 +156,6 @@ for more Info : https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/hea
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 
+How to create a helper method in asp.net mvc ?
+
+https://www.c-sharpcorner.com/UploadFile/3194c4/custom-html-helpers-in-mvc/#:~:text=There%20are%20two%20ways%20in,custom%20Html%20helpers%20as%20below.&text=We%20can%20create%20our%20own,then%20just%20like%20inbuilt%20helpers.&text=Add%20new%20class%20in%20MVC%20application%20and%20give%20it%20meaningful%20name.
