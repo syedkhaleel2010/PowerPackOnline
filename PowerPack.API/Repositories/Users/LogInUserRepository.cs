@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public class LogInUserRepository : SqlRepository<LogInUser>, ILogInUserRepository
     {
@@ -45,12 +45,12 @@ namespace SIMS.API.Repositories
             }
         }
 
-        public async Task<IEnumerable<LogInUser>> GetUserList(int schoolId)
+        public async Task<IEnumerable<LogInUser>> GetUserList(int Id)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
-                parameters.Add("@SchoolId", schoolId, DbType.Int32);
+                parameters.Add("@Id", Id, DbType.Int32);
                 return await conn.QueryAsync<LogInUser>("Admin.GetUserList", parameters, commandType: CommandType.StoredProcedure);
             }
         }

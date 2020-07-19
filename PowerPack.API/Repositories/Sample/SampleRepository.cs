@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace PowerPack.API.Repositories
 {
-    public class DivisionRepository : SqlRepository<DivisionDetails>, IDivisionRepositorycs
+    public class SampleRepository : SqlRepository<SampleDetails>, ISampleRepositorycs
     {
         private readonly IConfiguration _config;
-        public DivisionRepository(IConfiguration configuration) : base(configuration)
+        public SampleRepository(IConfiguration configuration) : base(configuration)
         {
             _config = configuration;
         }
@@ -24,53 +24,53 @@ namespace PowerPack.API.Repositories
             throw new NotImplementedException();
         }
 
-        public override Task<IEnumerable<DivisionDetails>> GetAllAsync()
+        public override Task<IEnumerable<SampleDetails>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public override Task<DivisionDetails> GetAsync(int id)
+        public override Task<SampleDetails> GetAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public override void InsertAsync(DivisionDetails entity)
+        public override void InsertAsync(SampleDetails entity)
         {
             throw new NotImplementedException();
         }
 
-        public override void UpdateAsync(DivisionDetails entityToUpdate)
+        public override void UpdateAsync(SampleDetails entityToUpdate)
         {
             throw new NotImplementedException();
         }
-        public async Task<int> SaveDivisionDetails(DivisionDetails DivisionDetails, string DATAMODE)
-        {
-            using (var conn = GetOpenConnection())
-            {
+        //public async Task<int> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE)
+        //{
+        //    using (var conn = GetOpenConnection())
+        //    {
 
-                var parameters = new DynamicParameters();
-                parameters.Add("@DivisionId", DivisionDetails.DivisionId, DbType.Int64);
-                parameters.Add("@DivisionName", DivisionDetails.DivisionName, DbType.String);
-                parameters.Add("@GradeId", DivisionDetails.GradeList, DbType.String);
-                parameters.Add("@SchoolId", DivisionDetails.BSU_ID, DbType.Int64);
-                parameters.Add("@CreatedBy", DivisionDetails.CREATED_BY, DbType.String);
-                parameters.Add("@DATAMODE", DATAMODE, DbType.String);
-                parameters.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                await conn.QueryFirstOrDefaultAsync<int>("SIMS.SaveDivisionDetails", parameters, null, null, CommandType.StoredProcedure);
-                return parameters.Get<int>("output");
-            }
-        }
-        public async Task<IEnumerable<DivisionDetails>> GetDivisionDetails(long BSU_ID)
+        //        var parameters = new DynamicParameters();
+        //        parameters.Add("@SampleId", SampleDetails.SampleId, DbType.Int64);
+        //        parameters.Add("@SampleName", SampleDetails.SampleName, DbType.String);
+        //        parameters.Add("@GradeId", SampleDetails.GradeList, DbType.String);
+        //        parameters.Add("@Id", SampleDetails.BSU_ID, DbType.Int64);
+        //        parameters.Add("@CreatedBy", SampleDetails.CREATED_BY, DbType.String);
+        //        parameters.Add("@DATAMODE", DATAMODE, DbType.String);
+        //        parameters.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
+        //        await conn.QueryFirstOrDefaultAsync<int>("SIMS.SaveSampleDetails", parameters, null, null, CommandType.StoredProcedure);
+        //        return parameters.Get<int>("output");
+        //    }
+        //}
+        public async Task<IEnumerable<SampleDetails>> GetSampleDetails(long BSU_ID)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@BSU_ID", BSU_ID, DbType.Int64);
                 
-                return await conn.QueryAsync<DivisionDetails>("SIMS.GetDivisionDetails", parameters, null, null, CommandType.StoredProcedure);
+                return await conn.QueryAsync<SampleDetails>("SIMS.GetSampleDetails", parameters, null, null, CommandType.StoredProcedure);
             }
         }
-        public async Task<IEnumerable<DivisionDetails>> GetDivisionDetails(long BSU_ID, long acdId, string isSuperUser, string username)
+        public async Task<IEnumerable<SampleDetails>> GetSampleDetails(long BSU_ID, long acdId, string isSuperUser, string username)
         {
             using (var conn = GetOpenConnection())
             {
@@ -79,7 +79,7 @@ namespace PowerPack.API.Repositories
                 parameters.Add("@ACD_ID", acdId, DbType.Int64);
                 parameters.Add("@IsSuperUser", isSuperUser, DbType.String);
                 parameters.Add("@Username", username, DbType.String);
-                return await conn.QueryAsync<DivisionDetails>("SIMS.GetDivisionDetailsForDropdown", parameters, null, null, CommandType.StoredProcedure);
+                return await conn.QueryAsync<SampleDetails>("SIMS.GetSampleDetailsForDropdown", parameters, null, null, CommandType.StoredProcedure);
             }
         }
     }

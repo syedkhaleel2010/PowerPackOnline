@@ -16,7 +16,7 @@ namespace PowerPack.Models.Entities
         public DateTime TimeUtc { get; set; }
         public int Sequence { get; set; }
         public string AllXml { get; set; }
-        public long SchoolId { get; set; }
+        public long StoreId { get; set; }
         public bool IsWeb { get; set; }
     }
     public class  ErrorLog

@@ -17,6 +17,6 @@ namespace PowerPack.Common.Models
         public string OperationType { get; set; }
         public short? UserId { get; set; }
         public short UserRoleId { get; set; }
-        public int SchoolId { get; set; }
+        public int StoreId { get; set; }
     }
 }

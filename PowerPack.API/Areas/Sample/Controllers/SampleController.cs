@@ -18,14 +18,14 @@ namespace PowerPack.API.Areas.Sample.Controllers
         {
             _SampleService = SampleService;
         }
-        [HttpPost]
-        [Route("SaveSampleDetails")]
-        [ProducesResponseType((int)HttpStatusCode.Created)]
-        public async Task<IActionResult> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE)
-        {
-            var result = await _SampleService.SaveSampleDetails(SampleDetails, DATAMODE);
-            return Ok(result);
-        }
+        //[HttpPost]
+        //[Route("SaveSampleDetails")]
+        //[ProducesResponseType((int)HttpStatusCode.Created)]
+        //public async Task<IActionResult> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE)
+        //{
+        //    var result = await _SampleService.SaveSampleDetails(SampleDetails, DATAMODE);
+        //    return Ok(result);
+        //}
         [HttpGet]
         [Route("GetSampleDetails")]
         [ProducesResponseType(typeof(IEnumerable<PowerPack.API.Models.SampleDetails>), (int)HttpStatusCode.OK)]

@@ -35,7 +35,7 @@ namespace PowerPackOnline.Web.Helpers
         //excel connection strings
         public const string Excel03ConString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties = 'Excel 8.0;HDR={1}'";
         public const string Excel07ConString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties = 'Excel 12.0;HDR={1}'";
-        public const string SchoolImagesPath = "/Uploads/SchoolImages/";
+        public const string StoreImagesPath = "/Uploads/StoreImages/";
         
         
         //Error Screen Shots

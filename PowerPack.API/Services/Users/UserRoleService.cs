@@ -1,5 +1,5 @@
 ﻿using PowerPack.Models;
-using SIMS.API.Repositories;
+using PowerPack.API.Repositories;
 using PowerPack.Common.Enums;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using PowerPack.Common.ViewModels;
 using PowerPack.Common.Models;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public class UserRoleService : IUserRoleService
     {
@@ -99,10 +99,10 @@ namespace SIMS.API.Services
             return await _userRoleRepository.DeleteUserRoleMappingData(userId, roleId);
         }
 
-        public Task<IEnumerable<UserRole>> GetUserRolesByStoreId(int StoreId)
-        {
-            return _userRoleRepository.GetUserRolesByStoreId(StoreId);
-        }
+        //public Task<IEnumerable<UserRole>> GetUserRolesByStoreId(int StoreId)
+        //{
+        //    return _userRoleRepository.GetUserRolesByStoreId(StoreId);
+        //}
 
         public Task<IEnumerable<User>> GetUsersForRole(int roleId, int StoreId)
         {

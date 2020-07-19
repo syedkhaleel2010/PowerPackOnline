@@ -31,32 +31,32 @@ namespace PowerPack.Common.Helpers
                 return _languages;
             }
         }
-        public static SystemLanguage GetSchoolCurrentLanguage()
+        public static SystemLanguage GetStoreCurrentLanguage()
         {
             //DataHelper _datahelper = new DataHelper();
-            //DataParameter parameter = new DataParameter("@SchoolId", SqlDbType.BigInt, PowerPackConfiguration.Instance.DefaultSchoolId);
-            //string query = "SELECT TOP 1 SystemLanguageId FROM Admin.SchoolSettings WHERE SchoolId = @SchoolId";
+            //DataParameter parameter = new DataParameter("@StoreId", SqlDbType.BigInt, PowerPackConfiguration.Instance.DefaultStoreId);
+            //string query = "SELECT TOP 1 SystemLanguageId FROM Admin.StoreSettings WHERE StoreId = @StoreId";
             //int currentLanguageId = _datahelper.GetScalarValue(query, CommandType.Text, parameter).ToInteger();
             //if(currentLanguageId > 0)
             //    return SystemLanguages.FirstOrDefault(x => x.SystemLanguageId == currentLanguageId);
             //else
             ICommonService _commonService = new CommonService();
-            int currentLanguageId = _commonService.GetSchoolCurrentLanguage(Convert.ToInt32(SessionHelper.CurrentSession.SchoolId)).SystemLanguageId;
+            int currentLanguageId = _commonService.GetStoreCurrentLanguage(Convert.ToInt32(SessionHelper.CurrentSession.StoreId)).SystemLanguageId;
             if (currentLanguageId > 0)
                 return SystemLanguages.FirstOrDefault(x => x.SystemLanguageId == currentLanguageId);
             else
                 return new SystemLanguage(1, "EN");
         }
 
-        public static bool SetSchoolCurrentLanguage(int languageId)
+        public static bool SetStoreCurrentLanguage(int languageId)
         {
             //DataHelper _datahelper = new DataHelper();
             //IList<DataParameter> parameters = new List<DataParameter>();
-            //parameters.Add(new DataParameter("@SchoolId", SqlDbType.BigInt, PowerPackConfiguration.Instance.DefaultSchoolId));
+            //parameters.Add(new DataParameter("@StoreId", SqlDbType.BigInt, PowerPackConfiguration.Instance.DefaultStoreId));
             //parameters.Add(new DataParameter("@SystemLanguageId", SqlDbType.Int, languageId));
-            //return _datahelper.ExecuteNonQuery("Admin.SetSchoolCurrentLanguage", CommandType.StoredProcedure, parameters).ToInteger() > 0;
+            //return _datahelper.ExecuteNonQuery("Admin.SetStoreCurrentLanguage", CommandType.StoredProcedure, parameters).ToInteger() > 0;
             ICommonService _commonService = new CommonService();
-            return _commonService.SetSchoolCurrentLanguage(languageId, Convert.ToInt32(SessionHelper.CurrentSession.SchoolId));
+            return _commonService.SetStoreCurrentLanguage(languageId, Convert.ToInt32(SessionHelper.CurrentSession.StoreId));
             //return true;
         }
 

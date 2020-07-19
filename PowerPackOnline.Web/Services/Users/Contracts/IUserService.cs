@@ -18,9 +18,9 @@ namespace PowerPackOnline.Web.Services
         bool UpdateUserProfile(UserProfileView userProfileView);
         IEnumerable<UserNotificationView> GetUserNotifications();
         bool PushNotificationLogs(string notificationType, int sourceId, long userId);
-        IEnumerable<User> GetUserBySchool(long? schoolId, int userTypeId);
+        IEnumerable<User> GetUserByStore(long? StoreId, int userTypeId);
         User GetUserById(long userId);
-        IEnumerable<User> SearchUserByName(string name, long schoolId = 0, int userTypeId = 0);
+        IEnumerable<User> SearchUserByName(string name, long StoreId = 0, int userTypeId = 0);
         IEnumerable<User> GetUsersByRolesLocatonAllowed(string roles);
         bool SendErrorLog(ErrorLogger errorLogger);
         IEnumerable<DBLogDetails> GetDBLogDetails();

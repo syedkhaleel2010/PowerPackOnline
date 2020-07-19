@@ -35,7 +35,7 @@ namespace PowerPack.Common.ViewModels
         [JsonProperty("LOG_TYPE")]
         public string LogType { get; set; }
         [JsonProperty("STU_ID")]
-        public string StudentId { get; set; }
+        public string ProductId { get; set; }
         [JsonProperty("FROM_EMAIL")]
         public string FromMail { get; set; }
         [JsonProperty("SUBJECT")]

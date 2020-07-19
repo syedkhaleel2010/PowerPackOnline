@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PowerPack.Models.Entities;
-using SIMS.API.Repositories;
+using PowerPack.API.Repositories;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public class UserLoginLogService : IUserLoginLogService
     {

@@ -1,11 +1,11 @@
-﻿using SIMS.API.Repositories;
-using SIMS.API.Models;
+﻿using PowerPack.API.Repositories;
+using PowerPack.API.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 using PowerPack.Common.Models;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public class SampleService : ISampleService
     {
@@ -16,10 +16,10 @@ namespace SIMS.API.Services
             _ISampleRepositorycs = ISampleRepositorycs;
 
         }
-        public async Task<int> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE)
-        {
-            return await _ISampleRepositorycs.SaveSampleDetails(SampleDetails, DATAMODE);
-        }
+        //public async Task<int> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE)
+        //{
+        //    return await _ISampleRepositorycs.SaveSampleDetails(SampleDetails, DATAMODE);
+        //}
         public async Task<IEnumerable<SampleDetails>> GetSampleDetails(long BSU_ID)
         {
             return await _ISampleRepositorycs.GetSampleDetails(BSU_ID);

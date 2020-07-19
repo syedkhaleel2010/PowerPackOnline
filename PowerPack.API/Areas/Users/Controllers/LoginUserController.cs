@@ -12,6 +12,7 @@ using System.Web;
 using PowerPack.Common.Helpers;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace PowerPack.API.Areas.Users.Controllers
 {
     [Route("api/v1/[controller]")]

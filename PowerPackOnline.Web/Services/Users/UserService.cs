@@ -33,7 +33,7 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
         /// Description : To fetch all users
         /// </summary>
@@ -51,7 +51,7 @@ namespace PowerPackOnline.Web.Services
             return Users;
         }
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To fetch all user feelings
         /// </summary>
@@ -70,7 +70,7 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To fetch all user avatars
         /// </summary>
@@ -88,7 +88,7 @@ namespace PowerPackOnline.Web.Services
             return lstUserFeelingView;
         }
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To Update user feeling
         /// </summary>
@@ -105,7 +105,7 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To Update user feeling
         /// </summary>
@@ -119,7 +119,7 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 16-Oct-2019
         /// Description : To insert notification log
         /// </summary>
@@ -139,7 +139,7 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
         /// Description : To fetch all users by id
         /// </summary>
@@ -159,16 +159,16 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
-        /// Description : To fetch all users filtered by school id
+        /// Description : To fetch all users filtered by Store id
         /// </summary>
-        /// <param name="schoolId"></param>
+        /// <param name="StoreId"></param>
         /// <param name="userTypeId"></param>
         /// <returns></returns>
-        public IEnumerable<User> GetUserBySchool(long? schoolId, int userTypeId)
+        public IEnumerable<User> GetUserByStore(long? StoreId, int userTypeId)
         {
-            var uri = API.Users.GetUserBySchool(_path, schoolId, userTypeId);
+            var uri = API.Users.GetUserByStore(_path, StoreId, userTypeId);
             IEnumerable<User> Users = new List<User>();
             HttpResponseMessage response = _client.GetAsync(uri).Result;
             if (response.IsSuccessStatusCode)
@@ -181,7 +181,7 @@ namespace PowerPackOnline.Web.Services
 
         public IEnumerable<UserNotificationView> GetUserNotifications()
         {
-            long userId = SessionHelper.CurrentSession.IsStudent()? SessionHelper.CurrentSession.Id:SessionHelper.CurrentSession.CurrentSelectedStudent.UserId;
+            long userId = SessionHelper.CurrentSession.IsAdmin? SessionHelper.CurrentSession.Id:SessionHelper.CurrentSession.CurrentSelectedProduct.UserId;
             int userTypeId = SessionHelper.CurrentSession.UserTypeId;
             long loginUserId = SessionHelper.CurrentSession.Id;
             var uri = API.Users.GetUserNotifications(_path, userTypeId, userId, loginUserId);
@@ -197,7 +197,7 @@ namespace PowerPackOnline.Web.Services
 
         public IEnumerable<UserNotificationView> GetAllNotifications()
         {
-            long userId = SessionHelper.CurrentSession.IsStudent() ? SessionHelper.CurrentSession.Id : SessionHelper.CurrentSession.CurrentSelectedStudent.UserId;
+            long userId = SessionHelper.CurrentSession.IsAdmin ? SessionHelper.CurrentSession.Id : SessionHelper.CurrentSession.CurrentSelectedProduct.UserId;
             int userTypeId = SessionHelper.CurrentSession.UserTypeId;
             long loginUserId = SessionHelper.CurrentSession.Id;
             var uri = API.Users.GetAllNotifications(_path, userTypeId, userId, loginUserId);
@@ -212,7 +212,7 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 13-June-2019
         /// Description :  To fetch user by role and location allowed to access
         /// </summary>
@@ -232,17 +232,17 @@ namespace PowerPackOnline.Web.Services
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 19-MAY-2019
         /// Description : To search users by name
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="schoolId"></param>
+        /// <param name="StoreId"></param>
         /// <param name="userTypeId"></param>
         /// <returns></returns>
-        public IEnumerable<User> SearchUserByName(string name, long schoolId = 0, int userTypeId = 0)
+        public IEnumerable<User> SearchUserByName(string name, long StoreId = 0, int userTypeId = 0)
         {
-            var uri = API.Users.SearchUserByName(_path, name, userTypeId, schoolId);
+            var uri = API.Users.SearchUserByName(_path, name, userTypeId, StoreId);
             IEnumerable<User> Users = new List<User>();
             HttpResponseMessage response = _client.GetAsync(uri).Result;
             if (response.IsSuccessStatusCode)

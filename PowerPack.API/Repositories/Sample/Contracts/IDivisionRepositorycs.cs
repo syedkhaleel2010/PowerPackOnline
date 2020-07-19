@@ -10,7 +10,7 @@ namespace PowerPack.API.Repositories
 {
     public interface ISampleRepositorycs
     {
-        Task<int> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE);
+        //Task<int> SaveSampleDetails(SampleDetails SampleDetails, string DATAMODE);
         Task<IEnumerable<SampleDetails>> GetSampleDetails(long BSU_ID);
         Task<IEnumerable<SampleDetails>> GetSampleDetails(long BSU_ID, long acdId, string isSuperUser, string username);
     }

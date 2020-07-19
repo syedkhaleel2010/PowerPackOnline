@@ -1,11 +1,11 @@
 ﻿using PowerPack.Models;
-using SIMS.API.Models;
+using PowerPack.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public interface IUserPermissionService
     {

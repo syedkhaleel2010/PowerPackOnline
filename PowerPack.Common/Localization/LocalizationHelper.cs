@@ -24,7 +24,7 @@ namespace PowerPack.Common.Localization
             get
             {
                 if (_currentSystemLanguage == null)
-                    _currentSystemLanguage = SystemLanguageHelper.GetSchoolCurrentLanguage();
+                    _currentSystemLanguage = SystemLanguageHelper.GetStoreCurrentLanguage();
                 return _currentSystemLanguage;
             }
             set
@@ -216,7 +216,7 @@ namespace PowerPack.Common.Localization
 
         public static void UpdateCurrentSystemLanguage(int languageId)
         {
-            SystemLanguageHelper.SetSchoolCurrentLanguage(languageId);
+            SystemLanguageHelper.SetStoreCurrentLanguage(languageId);
             _currentSystemLanguage = SystemLanguages.FirstOrDefault(x => x.SystemLanguageId == languageId);
         }
         #endregion

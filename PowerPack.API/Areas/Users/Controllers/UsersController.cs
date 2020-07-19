@@ -41,7 +41,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To fetch all the user feelings
         /// </summary>
@@ -57,7 +57,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 23-JUNE-2019
         /// Description : To fetch all the user avatar
         /// </summary>
@@ -89,7 +89,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To fetch Update user feelings
         /// </summary>
@@ -105,7 +105,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 24-JUNE-2019
         /// Description : To UpdateUserProfile
         /// </summary>
@@ -121,7 +121,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 16-OCT-2019
         /// Description : Insert notofication log
         /// </summary>
@@ -147,17 +147,17 @@ namespace PowerPack.API.Areas.Users.Controllers
         /// <param name="userTypeId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("getusersbyschool")]
+        [Route("getusersbyStore")]
         [ProducesResponseType(typeof(IEnumerable<User>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetUsersBySchool(int? id, int userTypeId)
+        public async Task<IActionResult> GetUsersByStore(int? id, int userTypeId)
         {
-            var users = await _UserService.GetUserBySchool(id, userTypeId);
+            var users = await _UserService.GetUserByStore(id, userTypeId);
             return Ok(users);
         }
 
         /// <summary>
-        /// Author : Girish Sonawane 
+        /// Author :  
         /// Created Date : 15/10/2019
         /// Description : To get user notifications
         /// </summary>
@@ -176,7 +176,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Girish Sonawane 
+        /// Author :  
         /// Created Date : 15/10/2019
         /// Description : To get all notifications
         /// </summary>

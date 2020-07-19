@@ -49,19 +49,7 @@ namespace PowerPackOnline.Web.Services
             return list;
         }
 
-        public IEnumerable<SubjectListItem> GetSubjectsByUserId(int userId)
-        {
-            int languageId = LocalizationHelper.CurrentSystemLanguageId;
-            var uri = API.SelectList.GetSubjectListItems(_path, languageId, userId);
-            IEnumerable<SubjectListItem> subjectsList = new List<SubjectListItem>();
-            HttpResponseMessage response = _client.GetAsync(uri).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                var jsonDataProviders = response.Content.ReadAsStringAsync().Result;
-                subjectsList = EntityMapper<string, IEnumerable<SubjectListItem>>.MapFromJson(jsonDataProviders);
-            }
-            return subjectsList;
-        }
+      
 
         #endregion
     }

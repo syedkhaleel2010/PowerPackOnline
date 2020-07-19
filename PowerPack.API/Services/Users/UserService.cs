@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SIMS.API.Repositories;
+using PowerPack.API.Repositories;
 using PowerPack.Common.Models;
 using PowerPack.Models;
 using PowerPack.Models.Entities;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public class UserService : IUserService
     {

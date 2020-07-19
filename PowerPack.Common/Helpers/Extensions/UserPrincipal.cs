@@ -17,10 +17,10 @@ namespace PowerPack.Common.Extensions
         string FullName { get; set; }
         string UserName { get; set; }
         string Email { get; set; }
-        Int64 SchoolId { get; set; }
-        string SchoolName { get; set; }
-        string SchoolCode { get; set; }
-        string SchoolEmail { get; set; }
+        Int64 StoreId { get; set; }
+        string StoreName { get; set; }
+        string StoreCode { get; set; }
+        string StoreEmail { get; set; }
 
         int BusinessUnitTypeId { get; set; }
         string BusinessUnitType { get; set; }
@@ -43,12 +43,12 @@ namespace PowerPack.Common.Extensions
         public bool IsInRole(string role) { return false; }
         public UserPrincipal()
         {
-            FamilyStudentList = new List<StudentDetail>();
+            FamilyProductList = new List<ProductDetail>();
         }
         public UserPrincipal(string email)
         {
             this.Identity = new GenericIdentity(email);
-            FamilyStudentList = new List<StudentDetail>();
+            FamilyProductList = new List<ProductDetail>();
             TerminologyCollection = new List<Tuple<long,string,string>>();
         }
 
@@ -59,11 +59,11 @@ namespace PowerPack.Common.Extensions
         public string FullName { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
-        public Int64 SchoolId { get; set; }
-        public Int64 SchoolGradeId { get; set; }
-        public string SchoolName { get; set; }
-        public string SchoolCode { get; set; }
-        public string SchoolEmail { get; set; }
+        public Int64 StoreId { get; set; }
+        public Int64 StoreGradeId { get; set; }
+        public string StoreName { get; set; }
+        public string StoreCode { get; set; }
+        public string StoreEmail { get; set; }
         public int BusinessUnitTypeId { get; set; }
         public string BusinessUnitType { get; set; }
         public int LanguageId { get; set; }
@@ -73,13 +73,13 @@ namespace PowerPack.Common.Extensions
         public UserTypes UserType { get; set; }
         public int RoleId { get; set; }
         public string RoleName { get; set; }
-        public string SchoolImage { get; set; }
+        public string StoreImage { get; set; }
         public string ProfilePhoto { get; set; }
         public string UserAvatar { get; set; }
         public int ParentId { get; set; }
         public string ParentUsername { get; set; }
-        public List<StudentDetail> FamilyStudentList { get; set; }
-        public StudentDetail CurrentSelectedStudent { get; set; }
+        public List<ProductDetail> FamilyProductList { get; set; }
+        public ProductDetail CurrentSelectedProduct { get; set; }
         public string Token { get; set; }
         public int ACD_ID { get; set; }
         public int CLM_ID { get; set; }
@@ -88,24 +88,24 @@ namespace PowerPack.Common.Extensions
 
         public bool HasMultipleChilds()
         {
-            return FamilyStudentList != null && FamilyStudentList.Count() > 1;
+            return FamilyProductList != null && FamilyProductList.Count() > 1;
         }
         public bool IsParent()
         {
-            return UserType == UserTypes.Parent;
+            return UserType == UserTypes.Admin;
         }
-        public bool IsStudent()
+        public bool IsProduct()
         {
-            return UserType == UserTypes.Student;
+            return UserType == UserTypes.SuperAdmin;
         }
         public bool IsTeacher()
         {
-            return UserType == UserTypes.Teacher;
+            return UserType == UserTypes.User;
         }
 
         public bool IsMSOAdmin { get; set; }
         public string CurrentModuleURL { get; set; }
-        public string StudentTheme { get; set; }
+        public string ProductTheme { get; set; }
         public long SessionId { get; set; }
         public int IsSTS { get; set; }
   
@@ -120,10 +120,10 @@ namespace PowerPack.Common.Extensions
         public string FullName { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
-        public Int64 SchoolId { get; set; }
-        public string SchoolName { get; set; }
-        public string SchoolCode { get; set; }
-        public string SchoolEmail { get; set; }
+        public Int64 StoreId { get; set; }
+        public string StoreName { get; set; }
+        public string StoreCode { get; set; }
+        public string StoreEmail { get; set; }
         public int BusinessUnitTypeId { get; set; }
         public string BusinessUnitType { get; set; }
         public int LanguageId { get; set; }
@@ -132,18 +132,18 @@ namespace PowerPack.Common.Extensions
         public string UserTypeName { get; set; }
         public int RoleId { get; set; }
         public string RoleName { get; set; }
-        public string SchoolImage { get; set; }
+        public string StoreImage { get; set; }
         public string ProfilePhoto { get; set; }
         public string UserAvatar { get; set; }
-        public string FamilyStudentListJsonString { get; set; }
-        public string CurrentSelectedStudentJsonString { get; set; }
+        public string FamilyProductListJsonString { get; set; }
+        public string CurrentSelectedProductJsonString { get; set; }
         public int ParentId { get; set; }
         public string ParentUsername { get; set; }
         public string AccessToken { get; set; }
         public bool IsMSOAdmin { get; set; }
         public string BannedWordsJsonString { get; set; }
         public string EmailAPIToken { get; set; }
-        public string StudentTheme { get; set; }
+        public string ProductTheme { get; set; }
         public long SessionId { get; set; }
         public int IsSTS { get; set; }
     }

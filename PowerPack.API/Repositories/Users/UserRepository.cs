@@ -260,10 +260,10 @@ namespace PowerPack.API.Repositories
                 dtErrorFiles.Columns.Add("UploadedFileName", typeof(string));
                 dtErrorFiles.Columns.Add("RefTaskID", typeof(Int64));
                
-                foreach (var item in objErrorLog.lstTaskFiles)
-                {
-                    dtErrorFiles.Rows.Add(item.TaskId, item.FileName, item.UploadedFileName, 1);
-                }
+                //foreach (var item in objErrorLog.lstTaskFiles)
+                //{
+                //    dtErrorFiles.Rows.Add(item.TaskId, item.FileName, item.UploadedFileName, 1);
+                //}
                 parameters.Add("@ErrorFiles", dtErrorFiles, DbType.Object);
                 conn.Query<int>("Admin.SaveErrorLogs", parameters, commandType: CommandType.StoredProcedure);
                 return parameters.Get<int>("Output") > 0;

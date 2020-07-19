@@ -60,7 +60,7 @@ namespace PowerPack.API.Repositories
             parameters.Add("@UserRoleId", entity.UserRoleId, DbType.Int32);
             parameters.Add("@UserRoleName", entity.UserRoleName, DbType.String);
             parameters.Add("@IsActive", entity.IsActive, DbType.Boolean);
-            parameters.Add("@Id", entity.Id, DbType.Int32);
+           // parameters.Add("@Id", entity.i, DbType.Int32);
             parameters.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
             return parameters;
         }

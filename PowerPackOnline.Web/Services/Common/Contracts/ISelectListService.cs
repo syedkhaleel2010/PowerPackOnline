@@ -10,6 +10,6 @@ namespace PowerPackOnline.Web.Services
     public interface ISelectListService
     {
         IEnumerable<ListItem> GetSelectListItems(string listCode, string whereCondition, object whereConditionParamValues);
-        IEnumerable<SubjectListItem> GetSubjectsByUserId(int userId);
+      
     }
 }

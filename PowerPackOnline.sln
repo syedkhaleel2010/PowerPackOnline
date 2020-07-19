@@ -33,9 +33,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPackOnline.Web", "Powe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{70598E5F-10F7-4B38-85D1-6D05FB013EB3}"
 	ProjectSection(SolutionItems) = preProject
-		Asish.sql = Asish.sql
+		AKP.sql = AKP.sql
 		CodeSnippets.txt = CodeSnippets.txt
-		Khaleel.sql = Khaleel.sql
+		SDK.sql = SDK.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBObjects", "DBObjects", "{31F69A4F-AA7B-47F1-8A98-B87F6294D64E}"

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PowerPack.Models;
-using SIMS.API.Models;
-using SIMS.API.Repositories;
+using PowerPack.API.Models;
+using PowerPack.API.Repositories;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public class UserPermissionService : IUserPermissionService
     {

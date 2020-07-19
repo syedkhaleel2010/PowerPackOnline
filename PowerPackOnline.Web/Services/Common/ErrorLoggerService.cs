@@ -96,7 +96,7 @@ namespace PowerPackOnline.Web.Services
                 TimeUtc = entry.Error.Time,
                 Type = entry.Error.Type,
                 User = entry.Error.User,
-                SchoolId = SessionHelper.CurrentSession.SchoolId
+                StoreId = SessionHelper.CurrentSession.Id
             };
         }
         #endregion

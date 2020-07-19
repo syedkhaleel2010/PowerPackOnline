@@ -10,7 +10,7 @@ namespace PowerPack.Common.Services
     public interface ICommonService
     {
         EmailSettingsView GetEmailSettings();
-        SystemLanguage GetSchoolCurrentLanguage(int schoolId);
-        bool SetSchoolCurrentLanguage(int languageId, int schoolId);
+        SystemLanguage GetStoreCurrentLanguage(int StoreId);
+        bool SetStoreCurrentLanguage(int languageId, int StoreId);
     }
 }

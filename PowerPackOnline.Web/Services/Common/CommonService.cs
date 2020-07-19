@@ -61,11 +61,11 @@ namespace PowerPackOnline.Web.Services
             return emailSettingsView;
         }
 
-        public SystemLanguage GetSchoolCurrentLanguage(int schoolId)
+        public SystemLanguage GetStoreCurrentLanguage(int StoreId)
         {
             var systemLanguage = new SystemLanguage();
 
-            var uri = API.Common.GetSchoolCurrentLanguage(_path, schoolId);
+            var uri = API.Common.GetStoreCurrentLanguage(_path, StoreId);
             HttpResponseMessage response = _client.GetAsync(uri).Result;
             if (response.IsSuccessStatusCode)
             {
@@ -75,10 +75,10 @@ namespace PowerPackOnline.Web.Services
             return systemLanguage;
         }
 
-        public bool SetSchoolCurrentLanguage(int languageId, int schoolId)
+        public bool SetStoreCurrentLanguage(int languageId, int StoreId)
         {
             var result = false;
-            var uri = API.Common.SetSchoolCurrentLanguage(_path, languageId, schoolId);
+            var uri = API.Common.SetStoreCurrentLanguage(_path, languageId, StoreId);
             HttpResponseMessage response = _client.GetAsync(uri).Result;
             if (response.IsSuccessStatusCode)
             {

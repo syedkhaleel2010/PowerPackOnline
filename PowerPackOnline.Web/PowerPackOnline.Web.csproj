@@ -150,6 +150,7 @@
     <Compile Include="Services\Users\LogInUserService.cs" />
     <Compile Include="Services\Users\UserLoginLogService.cs" />
     <Compile Include="Services\Users\UserService.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />

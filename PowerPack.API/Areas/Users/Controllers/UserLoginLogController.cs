@@ -21,7 +21,7 @@ namespace PowerPack.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By : Ashwin Dubey
+        /// Created By : 
         /// Created On : 22/April/2020
         /// Description: To save the user login logs
         /// </summary>

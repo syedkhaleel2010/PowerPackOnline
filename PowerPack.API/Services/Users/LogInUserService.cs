@@ -1,5 +1,5 @@
 ﻿using PowerPack.Models;
-using SIMS.API.Repositories;
+using PowerPack.API.Repositories;
 using PowerPack.Common.Enums;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 
-namespace SIMS.API.Services
+namespace PowerPack.API.Services
 {
     public class LogInUserService : ILogInUserService
     {

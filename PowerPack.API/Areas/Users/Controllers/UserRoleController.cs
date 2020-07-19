@@ -46,15 +46,15 @@ namespace PowerPack.API.Areas.Users.Controllers
         /// Description - To get all user roles.
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        [Route("getUserRolesbyId/{Id:int}")]
-        [ProducesResponseType(typeof(IEnumerable<UserRole>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetUserRoles(int Id)
-        {
-            var modelList = await _userRoleService.GetUserRolesById(Id);
-            return Ok(modelList);
-        }
+        //[HttpGet]
+        //[Route("getUserRolesbyId/{Id:int}")]
+        //[ProducesResponseType(typeof(IEnumerable<UserRole>), (int)HttpStatusCode.OK)]
+        //[ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        //public async Task<IActionResult> GetUserRoles(int Id)
+        //{
+        //    var modelList = await _userRoleService.GetUserRolesById(Id);
+        //    return Ok(modelList);
+        //}
 
         /// <summary>
         /// Created By: SD
@@ -270,15 +270,15 @@ namespace PowerPack.API.Areas.Users.Controllers
         /// </summary>
         /// <param name="updatePermissionDataWrapper"></param>
         /// <returns></returns>
-        [HttpPost]
-        [Route("UpdatePermissionTypeDataCUD")]
-        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> UpdatePermissionTypeDataCUD([FromBody]UpdatePermissionDataWrapper updatePermissionDataWrapper)
-        {
-            var model = await _userRoleService.UpdatePermissionTypeDataCUD(updatePermissionDataWrapper.objCustomPermissionEditList, updatePermissionDataWrapper.OperationType, updatePermissionDataWrapper.UserId, updatePermissionDataWrapper.UserRoleId, updatePermissionDataWrapper.Id);
-            return Ok(model);
-        }
+        //[HttpPost]
+        //[Route("UpdatePermissionTypeDataCUD")]
+        //[ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
+        //[ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        //public async Task<IActionResult> UpdatePermissionTypeDataCUD([FromBody]UpdatePermissionDataWrapper updatePermissionDataWrapper)
+        //{
+        //    var model = await _userRoleService.UpdatePermissionTypeDataCUD(updatePermissionDataWrapper.objCustomPermissionEditList, updatePermissionDataWrapper.OperationType, updatePermissionDataWrapper.UserId, updatePermissionDataWrapper.UserRoleId, updatePermissionDataWrapper.Id);
+        //    return Ok(model);
+        //}
 
         /// <summary>
         /// Created By - 

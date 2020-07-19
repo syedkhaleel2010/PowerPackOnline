@@ -15,8 +15,8 @@ namespace PowerPackOnline.Web.Helpers
         public static class Common
         {
             public static string GetEmailSettings(string baseUri) => $"{baseUri}/getEmailSettings";
-            public static string GetSchoolCurrentLanguage(string baseUri, int schoolId) => $"{baseUri}/getSchoolCurrentLanguage?schoolId={schoolId}";
-            public static string SetSchoolCurrentLanguage(string baseUri, int languageId, int schoolId) => $"{baseUri}/setSchoolCurrentLanguage?languageId={languageId}&schoolId={schoolId}";
+            public static string GetStoreCurrentLanguage(string baseUri, int StoreId) => $"{baseUri}/getStoreCurrentLanguage?StoreId={StoreId}";
+            public static string SetStoreCurrentLanguage(string baseUri, int languageId, int StoreId) => $"{baseUri}/setStoreCurrentLanguage?languageId={languageId}&StoreId={StoreId}";
             public static string OperationAuditCU(string baseUri) => $"{baseUri}/OperationAuditCU";
         }
         public static class ErrorLogger
@@ -44,7 +44,7 @@ namespace PowerPackOnline.Web.Helpers
         public static class LogInUser
         {
             public static string GetLoginUserByUserName(string baseUri) => $"{baseUri}/getloginuserbyusername/";
-            public static string GetUserList(string baseUri, int schoolId) => $"{baseUri}/getuserlist/{schoolId}";
+            public static string GetUserList(string baseUri, int StoreId) => $"{baseUri}/getuserlist/{StoreId}";
         }
 
         public static class Users
@@ -56,14 +56,14 @@ namespace PowerPackOnline.Web.Helpers
             public static string UpdateUserProfile(string baseUri) => $"{baseUri}/updateuserprofile";
 
 
-            public static string GetUserBySchool(string baseUri, long? schoolId, int userTypeId) => $"{baseUri}/getusersbyschool?id={schoolId}&userTypeId={userTypeId}";
+            public static string GetUserByStore(string baseUri, long? StoreId, int userTypeId) => $"{baseUri}/getusersbyStore?id={StoreId}&userTypeId={userTypeId}";
             public static string GetUserNotifications(string baseUri, int userTypeId, long? userId, long? loginUserId) => $"{baseUri}/getusernotifications?userTypeId={userTypeId}&userId={userId}&loginUserId={loginUserId}";
             public static string GetAllNotifications(string baseUri, int userTypeId, long? userId, long? loginUserId) => $"{baseUri}/getallnotifications?userTypeId={userTypeId}&userId={userId}&loginUserId={loginUserId}";
 
             public static string PushNotificationLogs(string baseUri, string notificationType, int sourceId, long userId) => $"{baseUri}/pushnotificationlogs?notificationType={notificationType}&sourceId={sourceId}&userId={userId}";
 
             public static string GetUserById(string baseUri, long UserId) => $"{baseUri}/getuserbyid?id={UserId}";
-            public static string SearchUserByName(string baseUri, string name, int typeId = 0, long schoolId = 0) => $"{baseUri}/searchuserbyname?name={name}&typeId={typeId}&schoolId={schoolId}";
+            public static string SearchUserByName(string baseUri, string name, int typeId = 0, long StoreId = 0) => $"{baseUri}/searchuserbyname?name={name}&typeId={typeId}&StoreId={StoreId}";
             public static string GetUsersByRolesLocatonAllowed(string baseUri, string roles) => $"{baseUri}/getusersbyrolelocation?roles={roles}";
             public static string SendErrorLog(string baseUri) => $"{baseUri}/saveErrorLogger";
             public static string GetDBLogDetails(string baseUri) => $"{baseUri}/GetDBLogdetails";
