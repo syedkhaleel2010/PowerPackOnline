@@ -5,12 +5,12 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SIMS.API.Services;
-using SIMS.API.Models;
+using PowerPack.API.Services;
+using PowerPack.API.Models;
 using PowerPack.Common.Helpers;
 using PowerPack.Models;
 
-namespace SIMS.API.Areas.Users.Controllers
+namespace PowerPack.API.Areas.Users.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -23,7 +23,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// CreatedBy: Deepak Singh
+        /// CreatedBy: SD
         /// CreatedOn: 29/May/2019
         /// Description: To check is permission assigned for the given url
         /// </summary>
@@ -43,7 +43,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// CreatedBy: Deepak Singh
+        /// CreatedBy: SD
         /// CreatedOn: 29/May/2019
         /// Description: To get user all permission assigned 
         /// </summary>
@@ -65,7 +65,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// CreatedBy: Deepak Singh
+        /// CreatedBy: SD
         /// CreatedOn: 04/June/2019
         /// Description: To add menu item in PowerPack module structure and permission list
         /// </summary>
@@ -81,7 +81,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// CreatedBy: Rohit Patil
+        /// CreatedBy: 
         /// CreatedOn: 12/Jun/2019
         /// Description: To check is custom permission assigned
         /// </summary>

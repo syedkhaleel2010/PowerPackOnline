@@ -5,13 +5,13 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SIMS.API.Services;
-using SIMS.API.Models;
+using PowerPack.API.Services;
+using PowerPack.API.Models;
 using PowerPack.Common.Models;
 using PowerPack.Common.ViewModels;
 using PowerPack.Models;
 
-namespace SIMS.API.Areas.Users.Controllers
+namespace PowerPack.API.Areas.Users.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -25,7 +25,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 18 Apr 2019
         /// Description - To get all user roles.
         /// </summary>
@@ -41,41 +41,41 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 18 Apr 2019
         /// Description - To get all user roles.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("getUserRolesbyschoolid/{schoolid:int}")]
+        [Route("getUserRolesbyId/{Id:int}")]
         [ProducesResponseType(typeof(IEnumerable<UserRole>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetUserRoles(int schoolId)
+        public async Task<IActionResult> GetUserRoles(int Id)
         {
-            var modelList = await _userRoleService.GetUserRolesBySchoolId(schoolId);
+            var modelList = await _userRoleService.GetUserRolesById(Id);
             return Ok(modelList);
         }
 
         /// <summary>
-        /// Created By: Deepak singh
+        /// Created By: SD
         /// Created On: 16 October 2019
-        /// Description: To get users by role id for school
+        /// Description: To get users by role id for 
         /// </summary>
         /// <param name="roleId"></param>
-        /// <param name="schoolId"></param>
+        /// <param name="Id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("getusersbyrole/{roleid:int}/{schoolid:int}")]
+        [Route("getusersbyrole/{roleid:int}/{Id:int}")]
         [ProducesResponseType(typeof(IEnumerable<User>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetUsersForRole(int roleId, int schoolId)
+        public async Task<IActionResult> GetUsersForRole(int roleId, int Id)
         {
-            var modelList = await _userRoleService.GetUsersForRole(roleId, schoolId);
+            var modelList = await _userRoleService.GetUsersForRole(roleId, Id);
             return Ok(modelList);
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 19 Apr 2019
         /// Description - To get user role by its ID.
         /// </summary>
@@ -92,7 +92,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 19 Apr 2019
         /// Description - To insert user role
         /// </summary>
@@ -108,7 +108,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 19 Apr 2019
         /// Description - To update user role.
         /// </summary>
@@ -124,7 +124,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 19 Apr 2019
         /// Description - To delete user role.
         /// </summary>
@@ -140,7 +140,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 31 may 2019
         /// Description - To get All User Role Mapping User ID.
         /// </summary>
@@ -150,14 +150,14 @@ namespace SIMS.API.Areas.Users.Controllers
         [Route("getAllUserRoleMappingData")]
         [ProducesResponseType(typeof(IEnumerable<UserRoleMapping>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetAllUserRoleMappingData(string userid, string schoolId = "")
+        public async Task<IActionResult> GetAllUserRoleMappingData(string userid, string Id = "")
         {
-            var model = await _userRoleService.GetAllUserRoleMappingData(userid, schoolId);
+            var model = await _userRoleService.GetAllUserRoleMappingData(userid, Id);
             return Ok(model);
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 31 may 2019
         /// Description - To Get Assigned User Mapping Data.
         /// </summary>
@@ -174,7 +174,7 @@ namespace SIMS.API.Areas.Users.Controllers
             return Ok(model);
         }
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 31 may 2019
         /// Description - To Get Module List.
         /// </summary>
@@ -192,7 +192,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 31 may 2019
         /// Description - To Get User Role Permission List.
         /// </summary>
@@ -207,25 +207,25 @@ namespace SIMS.API.Areas.Users.Controllers
             return Ok(model);
         }
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 31 may 2019
         /// Description - To Get Role Mapping Data.
         /// </summary>
         /// <param name="roleId"></param>
-        /// /// <param name="schoolId"></param>
+        /// /// <param name="Id"></param>
         /// <returns></returns>
         [HttpGet]
         [Route("GetRoleMappingData")]
         [ProducesResponseType(typeof(IEnumerable<ModuleStructure>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetRoleMappingData(int roleId, int schoolId)
+        public async Task<IActionResult> GetRoleMappingData(int roleId, int Id)
         {
-            var model = await _userRoleService.GetRoleMappingData(roleId, schoolId);
+            var model = await _userRoleService.GetRoleMappingData(roleId, Id);
             return Ok(model);
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 31 may 2019
         /// Description - To Get Module Structure List.
         /// </summary>
@@ -244,7 +244,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 06 jun 2019
         /// Description - To Get Module Structure List.
         /// </summary>
@@ -257,14 +257,14 @@ namespace SIMS.API.Areas.Users.Controllers
         [Route("GetAllPermissionData")]
         [ProducesResponseType(typeof(IEnumerable<PermissionTypeView>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetAllPermissionData(int userRoleId, int userId, int moduleId, bool loadCustomPermission, int schoolId)
+        public async Task<IActionResult> GetAllPermissionData(int userRoleId, int userId, int moduleId, bool loadCustomPermission, int Id)
         {
-            var model = await _userRoleService.GetAllPermissionData(userRoleId, userId, moduleId, loadCustomPermission, schoolId);
+            var model = await _userRoleService.GetAllPermissionData(userRoleId, userId, moduleId, loadCustomPermission, Id);
             return Ok(model);
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 07 jun 2019
         /// Description - To Update Permission Type Data CUD.
         /// </summary>
@@ -276,12 +276,12 @@ namespace SIMS.API.Areas.Users.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> UpdatePermissionTypeDataCUD([FromBody]UpdatePermissionDataWrapper updatePermissionDataWrapper)
         {
-            var model = await _userRoleService.UpdatePermissionTypeDataCUD(updatePermissionDataWrapper.objCustomPermissionEditList, updatePermissionDataWrapper.OperationType, updatePermissionDataWrapper.UserId, updatePermissionDataWrapper.UserRoleId, updatePermissionDataWrapper.SchoolId);
+            var model = await _userRoleService.UpdatePermissionTypeDataCUD(updatePermissionDataWrapper.objCustomPermissionEditList, updatePermissionDataWrapper.OperationType, updatePermissionDataWrapper.UserId, updatePermissionDataWrapper.UserRoleId, updatePermissionDataWrapper.Id);
             return Ok(model);
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 13 jun 2019
         /// Description - To Check User Role Mapping.
         /// </summary>
@@ -299,7 +299,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 13 jun 2019
         /// Description - To Insert User Role Mapping Data.
         /// </summary>
@@ -316,7 +316,7 @@ namespace SIMS.API.Areas.Users.Controllers
             return Ok(model);
         }
         /// <summary>
-        /// Created By - Rohit Patil
+        /// Created By - 
         /// Created Date - 13 jun 2019
         /// Description - To Delete User Role Mapping Data.
         /// </summary>
@@ -337,9 +337,9 @@ namespace SIMS.API.Areas.Users.Controllers
         [Route("GetAllReportPermissionData")]
         [ProducesResponseType(typeof(IEnumerable<PermissionTypeView>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetAllReportPermissionData(int userRoleId, int moduleId, long schoolId, int isRoleId, int isUserId, int parentModuleId)
+        public async Task<IActionResult> GetAllReportPermissionData(int userRoleId, int moduleId, long Id, int isRoleId, int isUserId, int parentModuleId)
         {
-            var model = await _userRoleService.GetAllReportPermissionData(userRoleId, moduleId, schoolId, isRoleId, isUserId, parentModuleId);
+            var model = await _userRoleService.GetAllReportPermissionData(userRoleId, moduleId, Id, isRoleId, isUserId, parentModuleId);
             return Ok(model);
         }
 
@@ -347,9 +347,9 @@ namespace SIMS.API.Areas.Users.Controllers
         [Route("SetReportPermissionForUserAndRole")]
         [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> SetReportPermissionForUserAndRole( string operationtype, int userRoleId, long schoolId, short IsUser, short IsRole, List<CustomPermissionEdit> MappingDetails)
+        public async Task<IActionResult> SetReportPermissionForUserAndRole( string operationtype, int userRoleId, long Id, short IsUser, short IsRole, List<CustomPermissionEdit> MappingDetails)
         {
-            var model = _userRoleService.SetReportPermissionForUserAndRole(MappingDetails, operationtype, userRoleId, schoolId, IsUser, IsRole);
+            var model = _userRoleService.SetReportPermissionForUserAndRole(MappingDetails, operationtype, userRoleId, Id, IsUser, IsRole);
             return Ok(model);
         }
     }

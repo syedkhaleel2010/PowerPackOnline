@@ -11,7 +11,7 @@ using PowerPack.Common.ViewModels;
 using PowerPack.Common.Models;
 using PowerPack.Common.DataAccess;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public class UserRoleRepository : SqlRepository<UserRole>, IUserRoleRepository
     {
@@ -30,13 +30,13 @@ namespace SIMS.API.Repositories
             }
         }
 
-        public async Task<IEnumerable<UserRole>> GetUserRolesBySchoolId(int schoolId)
+        public async Task<IEnumerable<UserRole>> GetUserRolesById(int Id)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
                 //parameters.Add("@UserRoleId", DBNull.Value, DbType.Int32);
-                parameters.Add("@BSU_ID", schoolId, DbType.Int32);
+                parameters.Add("@BSU_ID", Id, DbType.Int32);
 
                 return await conn.QueryAsync<UserRole>("[SIMS].GetUserRoleData", parameters, commandType: CommandType.StoredProcedure);
             }
@@ -60,7 +60,7 @@ namespace SIMS.API.Repositories
             parameters.Add("@UserRoleId", entity.UserRoleId, DbType.Int32);
             parameters.Add("@UserRoleName", entity.UserRoleName, DbType.String);
             parameters.Add("@IsActive", entity.IsActive, DbType.Boolean);
-            parameters.Add("@SchoolId", entity.SchoolId, DbType.Int32);
+            parameters.Add("@Id", entity.Id, DbType.Int32);
             parameters.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
             return parameters;
         }
@@ -99,13 +99,13 @@ namespace SIMS.API.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<UserRoleMapping>> GetAllUserRoleMappingData(string userName, string schoolId)
+        public async Task<IEnumerable<UserRoleMapping>> GetAllUserRoleMappingData(string userName, string Id)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", userName, DbType.String);
-                parameters.Add("@schoolId", schoolId, DbType.String);
+                parameters.Add("@Id", Id, DbType.String);
                 return await conn.QueryAsync<UserRoleMapping>("SIMS.GetAllUserRoleMappingData", parameters, commandType: CommandType.StoredProcedure);
             }
         }
@@ -146,13 +146,13 @@ namespace SIMS.API.Repositories
                 return await conn.QueryAsync<ModuleStructure>("Admin.GetRolePowerPackModuleData", parameters, commandType: CommandType.StoredProcedure);
             }
         }
-        public async Task<IEnumerable<ModuleStructure>> GetRoleMappingData(int roleId, int schoolId)
+        public async Task<IEnumerable<ModuleStructure>> GetRoleMappingData(int roleId, int Id)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@RoleId", roleId, DbType.Int32);
-                parameters.Add("@RoleId", schoolId, DbType.Int32);
+                parameters.Add("@RoleId", Id, DbType.Int32);
                 return await conn.QueryAsync<ModuleStructure>("Admin.GetRoleMappingData", parameters, commandType: CommandType.StoredProcedure);
             }
         }
@@ -167,7 +167,7 @@ namespace SIMS.API.Repositories
                 return await conn.QueryAsync<ModuleStructure>("Admin.GetModuleStructureList", parameters, commandType: CommandType.StoredProcedure);
             }
         }
-        public async Task<IEnumerable<PermissionTypeView>> GetAllPermissionData(int userRoleId, int userId, int moduleId, bool loadCustomePermission, int schoolId)
+        public async Task<IEnumerable<PermissionTypeView>> GetAllPermissionData(int userRoleId, int userId, int moduleId, bool loadCustomePermission, int Id)
         {
             using (var conn = GetOpenConnection())
             {
@@ -175,13 +175,13 @@ namespace SIMS.API.Repositories
                 parameters.Add("@UserRoleId", userRoleId, DbType.Int32);
                 parameters.Add("@UserId", userId, DbType.Int32);
                 parameters.Add("@ModuleId", moduleId, DbType.Int16);
-                parameters.Add("@SchoolId", schoolId, DbType.Int32);
+                parameters.Add("@Id", Id, DbType.Int32);
                 parameters.Add("@LoadCustomPermission", loadCustomePermission, DbType.Boolean);
 
                 return await conn.QueryAsync<PermissionTypeView>("Admin.GetAllPermissionData", parameters, commandType: CommandType.StoredProcedure);
             }
         }
-        public async Task<bool> UpdatePermissionTypeDataCUD(List<CustomPermissionEdit> MappingDetails, string operationtype, int? userId, short userRoleId, int schoolId)
+        public async Task<bool> UpdatePermissionTypeDataCUD(List<CustomPermissionEdit> MappingDetails, string operationtype, int? userId, short userRoleId, int Id)
         {
             using (var conn = GetOpenConnection())
             {
@@ -201,7 +201,7 @@ namespace SIMS.API.Repositories
                 parameters.Add("@UserRoleId", userRoleId, DbType.Int16);
                 parameters.Add("@OperationType", operationtype, DbType.String);
                 parameters.Add("@PermissionTypeData", dt, DbType.Object);
-                parameters.Add("@schoolId", schoolId, DbType.Int32);
+                parameters.Add("@Id", Id, DbType.Int32);
                 parameters.Add("@output", 0, DbType.Int32, ParameterDirection.Output);
 
 
@@ -273,26 +273,26 @@ namespace SIMS.API.Repositories
             }
         }
 
-        public async Task<IEnumerable<User>> GetUsersForRole(int roleId, int schoolId)
+        public async Task<IEnumerable<User>> GetUsersForRole(int roleId, int Id)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@ROL_ID", roleId, DbType.Int32);
-                parameters.Add("@BSU_ID", schoolId, DbType.Int32);
+                parameters.Add("@BSU_ID", Id, DbType.Int32);
 
                 return await conn.QueryAsync<User>("[SIMS].GetUserListByRoleId", parameters, commandType: CommandType.StoredProcedure);
             }
         }
 
-        public async Task<IEnumerable<PermissionTypeView>> GetAllReportPermissionData(int userRoleId, int moduleId, long schoolId, int isRoleId, int isUserId, int parentModuleId)
+        public async Task<IEnumerable<PermissionTypeView>> GetAllReportPermissionData(int userRoleId, int moduleId, long Id, int isRoleId, int isUserId, int parentModuleId)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserRoleId", userRoleId, DbType.Int32);
                 parameters.Add("@ModuleId", moduleId, DbType.Int16);
-                parameters.Add("@SchoolId", schoolId, DbType.Int64);
+                parameters.Add("@Id", Id, DbType.Int64);
                 parameters.Add("@IsRoleId", isRoleId, DbType.Int32);
                 parameters.Add("@IsUserId", isUserId, DbType.Int32);
                 parameters.Add("@parentModuleId", parentModuleId, DbType.Int32);
@@ -301,7 +301,7 @@ namespace SIMS.API.Repositories
             }
         }
 
-        public bool SetReportPermissionForUserAndRole(List<CustomPermissionEdit> MappingDetails, string operationtype, int userRoleId, long schoolId, short IsUser, short IsRole)
+        public bool SetReportPermissionForUserAndRole(List<CustomPermissionEdit> MappingDetails, string operationtype, int userRoleId, long Id, short IsUser, short IsRole)
         {
             using (var conn = GetOpenConnection())
             {
@@ -319,7 +319,7 @@ namespace SIMS.API.Repositories
                 var parameters = new DynamicParameters();
                 parameters.Add("@OperationType", operationtype, DbType.String);
                 parameters.Add("@UserRoleId", userRoleId, DbType.Int32);
-                parameters.Add("@schoolId", schoolId, DbType.Int64);
+                parameters.Add("@Id", Id, DbType.Int64);
                 parameters.Add("@PermissionTypeData", dt, DbType.Object);
                 parameters.Add("@IsUser", IsUser, DbType.Int16);
                 parameters.Add("@IsRole", IsRole, DbType.Int16);

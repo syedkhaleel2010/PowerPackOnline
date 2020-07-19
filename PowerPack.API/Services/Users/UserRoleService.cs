@@ -45,9 +45,9 @@ namespace SIMS.API.Services
             return _userRoleRepository.UpdateUserRoleData(entity, TransactionModes.Delete);
         }
 
-        public async Task<IEnumerable<UserRoleMapping>> GetAllUserRoleMappingData(string userName, string schoolId)
+        public async Task<IEnumerable<UserRoleMapping>> GetAllUserRoleMappingData(string userName, string StoreId)
         {
-            return await _userRoleRepository.GetAllUserRoleMappingData(userName, schoolId);
+            return await _userRoleRepository.GetAllUserRoleMappingData(userName, StoreId);
         }
 
         public async Task<IEnumerable<UserRoleMapping>> GetAssignedUserMappingData(int systemlanguageid, int roleid)
@@ -66,22 +66,22 @@ namespace SIMS.API.Services
         {
             return await _userRoleRepository.GetRolePowerPackModuleData(userroleid);
         }
-        public async Task<IEnumerable<ModuleStructure>> GetRoleMappingData(int roleId,int schoolId)
+        public async Task<IEnumerable<ModuleStructure>> GetRoleMappingData(int roleId,int StoreId)
         {
-            return await _userRoleRepository.GetRoleMappingData(roleId, schoolId);
+            return await _userRoleRepository.GetRoleMappingData(roleId, StoreId);
         }
         public async Task<IEnumerable<ModuleStructure>> GetModuleStructureList(int systemlanguageid, int? moduleid, string modulecode)
         {
             return await _userRoleRepository.GetModuleStructureList(systemlanguageid, moduleid, modulecode);
         }
-        public async Task<IEnumerable<PermissionTypeView>> GetAllPermissionData(int userRoleId, int userId, int moduleId, bool loadCustomePermission, int schoolId)
+        public async Task<IEnumerable<PermissionTypeView>> GetAllPermissionData(int userRoleId, int userId, int moduleId, bool loadCustomePermission, int StoreId)
         {
-            return await _userRoleRepository.GetAllPermissionData(userRoleId, userId, moduleId, loadCustomePermission, schoolId);
+            return await _userRoleRepository.GetAllPermissionData(userRoleId, userId, moduleId, loadCustomePermission, StoreId);
         }
 
-        public async Task<bool> UpdatePermissionTypeDataCUD(List<CustomPermissionEdit> MappingDetails, string operationtype, int? userId, short userRoleId, int schoolId)
+        public async Task<bool> UpdatePermissionTypeDataCUD(List<CustomPermissionEdit> MappingDetails, string operationtype, int? userId, short userRoleId, int StoreId)
         {
-            return await _userRoleRepository.UpdatePermissionTypeDataCUD(MappingDetails,operationtype,userId,userRoleId, schoolId);
+            return await _userRoleRepository.UpdatePermissionTypeDataCUD(MappingDetails,operationtype,userId,userRoleId, StoreId);
         }
 
         public async Task<object> CheckUserRoleMapping(string userId, short? roleId)
@@ -99,24 +99,24 @@ namespace SIMS.API.Services
             return await _userRoleRepository.DeleteUserRoleMappingData(userId, roleId);
         }
 
-        public Task<IEnumerable<UserRole>> GetUserRolesBySchoolId(int schoolId)
+        public Task<IEnumerable<UserRole>> GetUserRolesByStoreId(int StoreId)
         {
-            return _userRoleRepository.GetUserRolesBySchoolId(schoolId);
+            return _userRoleRepository.GetUserRolesByStoreId(StoreId);
         }
 
-        public Task<IEnumerable<User>> GetUsersForRole(int roleId, int schoolId)
+        public Task<IEnumerable<User>> GetUsersForRole(int roleId, int StoreId)
         {
-            return _userRoleRepository.GetUsersForRole(roleId, schoolId);
+            return _userRoleRepository.GetUsersForRole(roleId, StoreId);
         }
 
-        public Task<IEnumerable<PermissionTypeView>> GetAllReportPermissionData(int userRoleId, int moduleId, long schoolId, int isRoleId, int isUserId, int parentModuleId)
+        public Task<IEnumerable<PermissionTypeView>> GetAllReportPermissionData(int userRoleId, int moduleId, long StoreId, int isRoleId, int isUserId, int parentModuleId)
         {
-            return _userRoleRepository.GetAllReportPermissionData( userRoleId,  moduleId,  schoolId,  isRoleId,  isUserId, parentModuleId);
+            return _userRoleRepository.GetAllReportPermissionData( userRoleId,  moduleId,  StoreId,  isRoleId,  isUserId, parentModuleId);
         }
 
-        public bool SetReportPermissionForUserAndRole(List<CustomPermissionEdit> MappingDetails, string operationtype, int userRoleId, long schoolId, short IsUser, short IsRole)
+        public bool SetReportPermissionForUserAndRole(List<CustomPermissionEdit> MappingDetails, string operationtype, int userRoleId, long StoreId, short IsUser, short IsRole)
         {
-            return _userRoleRepository.SetReportPermissionForUserAndRole(MappingDetails, operationtype, userRoleId, schoolId, IsUser, IsRole);
+            return _userRoleRepository.SetReportPermissionForUserAndRole(MappingDetails, operationtype, userRoleId, StoreId, IsUser, IsRole);
         }
     }
 }

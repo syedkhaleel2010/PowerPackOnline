@@ -31,9 +31,9 @@ namespace SIMS.API.Services
             return loginUser;
         }
 
-        public async Task<IEnumerable<LogInUser>> GetUserList(int schoolId)
+        public async Task<IEnumerable<LogInUser>> GetUserList(int StoreId)
         {
-            return await _logInUserRepository.GetUserList(schoolId);
+            return await _logInUserRepository.GetUserList(StoreId);
         }
 
         /// <summary>

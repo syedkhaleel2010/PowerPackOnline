@@ -8,14 +8,14 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public interface IUserRepository : IGenericRepository<User>
     {
-        Task<IEnumerable<User>> GetUsersBySchool (int? schoolId, int UserTypeId);
+        Task<IEnumerable<User>> GetUsersByStore (int? Id, int UserTypeId);
         Task<IEnumerable<UserNotificationView>> GetUserNotifications(int? userTypeId, long userId, long loginUserId);
         Task<IEnumerable<UserNotificationView>> GetAllNotifications(int? userTypeId, long userId, long loginUserId);
-        Task<IEnumerable<User>> SearchUserByName(string name, int typeId = 0, int schoolId = 0);
+        Task<IEnumerable<User>> SearchUserByName(string name, int typeId = 0, int Id = 0);
 
         Task<IEnumerable<User>> GetUsersByRolesLocatonAllowed(string roles, long bussinessUnitId);
 

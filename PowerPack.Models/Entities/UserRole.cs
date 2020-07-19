@@ -20,7 +20,7 @@ namespace PowerPack.Models
         public bool IsActive { get; set; }
         public bool ShowToAll { get; set; }
         public string Actions { get; set; }
-        public long SchoolId { get; set; }
+      
         public int UserCount { get; set; }
     }
 }

@@ -11,8 +11,8 @@ namespace PowerPack.Common.Helpers
         public static class Common
         {
             public static string GetEmailSettings(string baseUri) => $"{baseUri}/getEmailSettings";
-            public static string GetSchoolCurrentLanguage(string baseUri, int schoolId) => $"{baseUri}/getSchoolCurrentLanguage?schoolId={schoolId}";
-            public static string SetSchoolCurrentLanguage(string baseUri, int languageId, int schoolId) => $"{baseUri}/setSchoolCurrentLanguage?languageId={languageId}&schoolId={schoolId}";
+            public static string GetCurrentLanguage(string baseUri, int Id) => $"{baseUri}/getCurrentLanguage?Id={Id}";
+            public static string SetCurrentLanguage(string baseUri, int languageId, int Id) => $"{baseUri}/setCurrentLanguage?languageId={languageId}&Id={Id}";
 
         }
     }

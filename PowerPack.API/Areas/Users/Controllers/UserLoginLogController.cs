@@ -5,9 +5,9 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PowerPack.Models.Entities;
-using SIMS.API.Services;
+using PowerPack.API.Services;
 
-namespace SIMS.API.Areas.Users.Controllers
+namespace PowerPack.API.Areas.Users.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]

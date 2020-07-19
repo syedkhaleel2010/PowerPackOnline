@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SIMS.API.Models;
+using PowerPack.API.Models;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public interface IUserPermissionRepository : IGenericRepository<UserPermission>
     {

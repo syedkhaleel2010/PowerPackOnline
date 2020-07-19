@@ -6,16 +6,9 @@ namespace PowerPack.Common.Enums
     {
         [StringValue("Admin")]
         AdminPanel,
-        [StringValue("HSE")]
-        HSE,
         [StringValue("ReportList")]
         ReportList,
-        [StringValue("VLE")]
-        Classroom,
         [StringValue("PowerPack")]
         PowerPack,
-        [StringValue("HSEAdmin")]
-        HSEAdmin
-
     }
 }

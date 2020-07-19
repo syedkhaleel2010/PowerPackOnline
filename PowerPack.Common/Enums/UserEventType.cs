@@ -32,26 +32,6 @@ namespace PowerPack.Common.Enums
         [StringValue("Approved")]
         Approved,
         [StringValue("Submitted")]
-        Submitted,
-        [StringValue("Investigator_Mapped")]
-        Investigator_Mapped,
-        [StringValue("Investigator_Unmapped")]
-        Investigator_Unmapped,
-        [StringValue("Document_Downloaded")]
-        Document_Downloaded,
-        [StringValue("Document_Removed")]
-        Document_Removed,
-        [StringValue("Document_Uploaded")]
-        Document_Uploaded,
-        //[StringValue("Investigation_Document_Downloaded")]
-        //Investigation_Document_Downloaded,
-        //[StringValue("Investigation_Document_Added")]
-        //Investigation_Document_Added,
-        //[StringValue("Investigation_Document_Updated")]
-        Investigation_Document_Updated,
-        [StringValue("Incident_Closed")]
-        Incident_Closed,
-        [StringValue("Incident_Reopened")]
-        Incident_Reopened
+        Submitted       
     }
 }

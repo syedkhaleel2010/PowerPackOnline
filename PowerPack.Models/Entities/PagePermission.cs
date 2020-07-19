@@ -33,10 +33,8 @@ namespace PowerPack.Models
 
     public enum UserTypes
     {
-        Student = 1,
-        Parent = 2,
-        Teacher = 3,
-        SchoolAdmin = 4,
-        SuperAdmin = 5
+        Admin = 1,
+        User = 2,
+        SuperAdmin = 3
     }
 }

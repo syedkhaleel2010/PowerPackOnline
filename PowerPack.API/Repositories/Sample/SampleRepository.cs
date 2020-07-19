@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using DbConnection;
 using Microsoft.Extensions.Configuration;
-using SIMS.API.Models;
+using PowerPack.API.Models;
 using PowerPack.Common.Enums;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Data;
 using System.Threading.Tasks;
 
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public class DivisionRepository : SqlRepository<DivisionDetails>, IDivisionRepositorycs
     {

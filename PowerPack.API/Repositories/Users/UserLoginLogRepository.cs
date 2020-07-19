@@ -8,7 +8,7 @@ using DbConnection;
 using Microsoft.Extensions.Configuration;
 using PowerPack.Models.Entities;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public class UserLoginLogRepository : SqlRepository<UserLoginLogs>, IUserLoginLogRepository
     {

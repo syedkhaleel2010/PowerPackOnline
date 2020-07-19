@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using System.Linq;
-using SIMS.API.Models;
+using PowerPack.API.Models;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public class UserPermissionRepository : SqlRepository<UserPermission>, IUserPermissionRepository
     {
@@ -26,7 +26,7 @@ namespace SIMS.API.Repositories
             //permission.UserId = userId;
             using (var conn = GetOpenConnection())
             {
-                if (/*userTypeId == (int)UserTypes.SchoolAdmin ||*/ userTypeId == (int)UserTypes.SuperAdmin)//Admin
+                if (/*userTypeId == (int)UserTypes.StoreAdmin ||*/ userTypeId == (int)UserTypes.SuperAdmin)//Admin
                 {
                     //Get ModuleId
                     string query = "SELECT top 1 ModuleId FROM Admin.ActivePowerPackModuleStructure";
@@ -97,7 +97,7 @@ namespace SIMS.API.Repositories
 
         public bool IsPermissionAssigned(string userName, string moduleUrl, int userTypeId = 1)
         {
-            if (/*userTypeId == (int)UserTypes.SchoolAdmin || */userTypeId == (int)UserTypes.SuperAdmin)
+            if (/*userTypeId == (int)UserTypes.StoreAdmin || */userTypeId == (int)UserTypes.SuperAdmin)
                 return true;
             using (var conn = GetOpenConnection())
             {

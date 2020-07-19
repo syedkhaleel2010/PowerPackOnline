@@ -85,14 +85,14 @@ namespace SIMS.API.Services
         /// <summary>
         /// Author : Athar Shaikh
         /// Created Date : 16-MAY-2019
-        /// Description : To fetch all the users by schoolId
+        /// Description : To fetch all the users by StoreId
         /// </summary>
         /// <param name="id"></param>
         /// <param name="UserTypeId"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<User>> GetUserBySchool(int? id, int UserTypeId)
+        public async Task<IEnumerable<User>> GetUserByStore(int? id, int UserTypeId)
         {
-            return await _userRepository.GetUsersBySchool(id, UserTypeId);
+            return await _userRepository.GetUsersByStore(id, UserTypeId);
         }
 
         /// <summary>
@@ -140,11 +140,11 @@ namespace SIMS.API.Services
         /// </summary>
         /// <param name="name"></param>
         /// <param name="typeId"></param>
-        /// <param name="schoolId"></param>
+        /// <param name="StoreId"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<User>> SearchUserByName(string name, int typeId = 0, int schoolId = 0)
+        public async Task<IEnumerable<User>> SearchUserByName(string name, int typeId = 0, int StoreId = 0)
         {
-            return await _userRepository.SearchUserByName(name, typeId, schoolId);
+            return await _userRepository.SearchUserByName(name, typeId, StoreId);
         }
 
         /// <summary>

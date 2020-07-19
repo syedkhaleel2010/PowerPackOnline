@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public interface IUserLoginLogRepository : IGenericRepository<UserLoginLogs>
     {

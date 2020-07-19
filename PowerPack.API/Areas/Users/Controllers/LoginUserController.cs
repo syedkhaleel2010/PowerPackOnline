@@ -5,14 +5,14 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SIMS.API.Services;
-using SIMS.API.Models;
+using PowerPack.API.Services;
+using PowerPack.API.Models;
 using PowerPack.Models;
 using System.Web;
 using PowerPack.Common.Helpers;
 using Microsoft.AspNetCore.Authorization;
 
-namespace SIMS.API.Areas.Users.Controllers
+namespace PowerPack.API.Areas.Users.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -26,8 +26,8 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// CreatedBy: Deepak Singh
-        /// CreatedOn: 05/May/2019
+        /// CreatedBy: SD
+        /// CreatedOn: 
         /// Description: To get login user details by username
         /// </summary>
         /// <param name="userName">username</param>
@@ -45,19 +45,19 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// CreatedBy: Rohit Patil
-        /// CreatedOn: 05/May/2019
-        /// Description: To get all user details filtered by school
+        /// CreatedBy: 
+        /// CreatedOn: 
+        /// Description: To get all user details filtered by 
         /// </summary>
-        /// <param name="schoolId">schoolId</param>
+        /// <param name="Id">Id</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("getuserlist/{schoolId:int}")]
+        [Route("getuserlist/{Id:int}")]
         [ProducesResponseType(typeof(IEnumerable<LogInUser>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetUserList(int schoolId)
+        public async Task<IActionResult> GetUserList(int Id)
         {
-            var result = await _logInUserService.GetUserList(schoolId);
+            var result = await _logInUserService.GetUserList(Id);
             return Ok(result);
         }
     }

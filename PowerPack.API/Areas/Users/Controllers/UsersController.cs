@@ -5,13 +5,13 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SIMS.API.Services;
-using SIMS.API.Models;
+using PowerPack.API.Services;
+using PowerPack.API.Models;
 using PowerPack.Common.Models;
 using PowerPack.Models;
 using PowerPack.Models.Entities;
 
-namespace SIMS.API.Areas.Users.Controllers
+namespace PowerPack.API.Areas.Users.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -25,7 +25,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
         /// Description : To fetch all the users
         /// </summary>
@@ -73,7 +73,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 13-June-2019
         /// Description :  To fetch user by role and location allowed to access
         /// </summary>
@@ -139,9 +139,9 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
-        /// Description : To fetch all users filtered by school id
+        /// Description : To fetch all users filtered by  id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="userTypeId"></param>
@@ -195,7 +195,7 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
         /// Description : To fetch all user by id
         /// </summary>
@@ -212,21 +212,21 @@ namespace SIMS.API.Areas.Users.Controllers
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 19-MAY-2019
         /// Description : To search users by name
         /// </summary>
         /// <param name="name"></param>
         /// <param name="typId"></param>
-        /// <param name="schoolId"></param>
+        /// <param name="Id"></param>
         /// <returns></returns>
         [HttpGet]
         [Route("searchuserbyname")]
         [ProducesResponseType(typeof(IEnumerable<User>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> SearchUserByName(string name, int typId = 0, int schoolId = 0)
+        public async Task<IActionResult> SearchUserByName(string name, int typId = 0, int Id = 0)
         {
-            var user = await _UserService.SearchUserByName(name, typId, schoolId);
+            var user = await _UserService.SearchUserByName(name, typId, Id);
             return Ok(user);
         }
         /// <summary>

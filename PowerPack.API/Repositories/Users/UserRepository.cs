@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace SIMS.API.Repositories
+namespace PowerPack.API.Repositories
 {
     public class UserRepository : SqlRepository<User>, IUserRepository
     {
@@ -23,7 +23,7 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
         /// Description : To fetch all the users
         /// </summary>
@@ -37,7 +37,7 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To fetch user feelings 
         /// </summary>
@@ -51,7 +51,7 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To fetch user profile avatar 
         /// </summary>
@@ -65,7 +65,7 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 18-JUNE-2019
         /// Description : To update user feelings 
         /// </summary>
@@ -85,7 +85,7 @@ namespace SIMS.API.Repositories
             }
         }
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 24-JUNE-2019
         /// Description : To UpdateUserProfile
         /// </summary>
@@ -105,7 +105,7 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Girish Sonawane
+        /// Author : 
         /// Created Date : 16-OCT-2019
         /// Description : To Insert Notification Log
         /// </summary>
@@ -124,25 +124,25 @@ namespace SIMS.API.Repositories
             }
         }
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
-        /// Description : To fetch users by school id
+        /// Description : To fetch users by  id
         /// </summary>
-        /// <param name="schoolId"></param>
+        /// <param name="Id"></param>
         /// <param name="UserTypeId"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<User>> GetUsersBySchool(int? schoolId, int UserTypeId)
+        public async Task<IEnumerable<User>> GetUsersByStore(int? Id, int UserTypeId)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
-                parameters.Add("@SchoolId", schoolId, DbType.Int32);
+                parameters.Add("@Id", Id, DbType.Int32);
                 return await conn.QueryAsync<User>("[SIMS].GetUsers", parameters, commandType: CommandType.StoredProcedure);
             }
         }
 
         /// <summary>
-        /// Author : Girish Sonawane 
+        /// Author :  
         /// Created Date : 15/10/2019
         /// Description : To get user notifications
         /// </summary>
@@ -162,7 +162,7 @@ namespace SIMS.API.Repositories
             }
         }
         /// <summary>
-        /// Author : Girish Sonawane 
+        /// Author :  
         /// Created Date : 15/10/2019
         /// Description : To get user notifications
         /// </summary>
@@ -182,7 +182,7 @@ namespace SIMS.API.Repositories
             }
         }
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 16-MAY-2019
         /// Description : To fetch user by id
         /// </summary>
@@ -199,20 +199,20 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 19-MAY-2019
         /// Description : To fetch user by name
         /// </summary>
         /// <param name="name"></param>
         /// <param name="typeId"></param>
-        /// <param name="schoolId"></param>
+        /// <param name="Id"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<User>> SearchUserByName(string name, int typeId = 0, int schoolId = 0)
+        public async Task<IEnumerable<User>> SearchUserByName(string name, int typeId = 0, int Id = 0)
         {
             using (var conn = GetOpenConnection())
             {
                 var parameters = new DynamicParameters();
-                parameters.Add("@schoolId", schoolId, DbType.Int32);
+                parameters.Add("@Id", Id, DbType.Int32);
                 parameters.Add("@typeId", typeId, DbType.Int32);
                 parameters.Add("@Name", name, DbType.String);
                 return await conn.QueryAsync<User>("dbo.UserSearchByName", parameters, commandType: CommandType.StoredProcedure);
@@ -220,7 +220,7 @@ namespace SIMS.API.Repositories
         }
 
         /// <summary>
-        /// Author : Athar Shaikh
+        /// Author : 
         /// Created Date : 13-JUNE-2019
         /// Description : To fetch user by role and location allowed to access
         /// </summary>

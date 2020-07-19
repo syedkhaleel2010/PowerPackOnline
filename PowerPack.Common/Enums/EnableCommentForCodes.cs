@@ -6,10 +6,10 @@ namespace PowerPack.Common.Enums
     {
         [StringValue("None")]
         None,
-        [StringValue("Student")]
-        Student,
-        [StringValue("Parent")]
-        Parent,
+        [StringValue("User")]
+        User,
+        [StringValue("Admin")]
+        Admin,
         [StringValue("All")]
         All
     }
