@@ -167,3 +167,6 @@ Unobtrusive Jquery validation in asp.net mvc
 https://exceptionnotfound.net/asp-net-mvc-demystified-unobtrusive-validation/
 
 ---------------------------------------------------------------------------------------------------------------------------
+simple nav bar using css
+
+https://codepen.io/kevinpowell/pen/GrLKNo
