@@ -26,7 +26,7 @@ namespace PowerPack.API.Areas.Users.Controllers
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all the users
         /// </summary>
         /// <returns></returns>
@@ -140,7 +140,7 @@ namespace PowerPack.API.Areas.Users.Controllers
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all users filtered by  id
         /// </summary>
         /// <param name="id"></param>
@@ -196,7 +196,7 @@ namespace PowerPack.API.Areas.Users.Controllers
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all user by id
         /// </summary>
         /// <param name="id"></param>
@@ -213,7 +213,7 @@ namespace PowerPack.API.Areas.Users.Controllers
 
         /// <summary>
         /// Author : 
-        /// Created Date : 19-MAY-2019
+        /// Created Date : 19-July-2020
         /// Description : To search users by name
         /// </summary>
         /// <param name="name"></param>

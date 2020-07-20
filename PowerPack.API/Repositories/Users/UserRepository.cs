@@ -24,7 +24,7 @@ namespace PowerPack.API.Repositories
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all the users
         /// </summary>
         /// <returns></returns>
@@ -125,7 +125,7 @@ namespace PowerPack.API.Repositories
         }
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch users by  id
         /// </summary>
         /// <param name="Id"></param>
@@ -183,7 +183,7 @@ namespace PowerPack.API.Repositories
         }
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch user by id
         /// </summary>
         /// <param name="id"></param>
@@ -200,7 +200,7 @@ namespace PowerPack.API.Repositories
 
         /// <summary>
         /// Author : 
-        /// Created Date : 19-MAY-2019
+        /// Created Date : 19-July-2020
         /// Description : To fetch user by name
         /// </summary>
         /// <param name="name"></param>

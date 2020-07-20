@@ -37,7 +37,7 @@ namespace PowerPack.API.Services
         }
 
         /// <summary>
-        /// Deepak Singh, 19 August 2019, To get token for api authentication
+        /// , 19 August 2019, To get token for api authentication
         /// </summary>
         /// <param name="logInUser"></param>
         /// <returns></returns>

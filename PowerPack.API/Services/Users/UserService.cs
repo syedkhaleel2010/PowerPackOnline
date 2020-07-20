@@ -20,7 +20,7 @@ namespace PowerPack.API.Services
 
         /// <summary>
         /// Author : Athar Shaikh
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all the users
         /// </summary>
         /// <returns></returns>
@@ -84,7 +84,7 @@ namespace PowerPack.API.Services
         }
         /// <summary>
         /// Author : Athar Shaikh
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all the users by StoreId
         /// </summary>
         /// <param name="id"></param>
@@ -123,7 +123,7 @@ namespace PowerPack.API.Services
         }
         /// <summary>
         /// Author : Athar Shaikh
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all the user by id
         /// </summary>
         /// <param name="id"></param>
@@ -135,7 +135,7 @@ namespace PowerPack.API.Services
 
         /// <summary>
         /// Author : Athar Shaikh
-        /// Created Date : 19-MAY-2019
+        /// Created Date : 19-July-2020
         /// Description : To fetch all the user name
         /// </summary>
         /// <param name="name"></param>

@@ -34,7 +34,7 @@ namespace PowerPackOnline.Web.Services
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all users
         /// </summary>
         /// <returns></returns>
@@ -140,7 +140,7 @@ namespace PowerPackOnline.Web.Services
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all users by id
         /// </summary>
         /// <param name="id"></param>
@@ -160,7 +160,7 @@ namespace PowerPackOnline.Web.Services
 
         /// <summary>
         /// Author : 
-        /// Created Date : 16-MAY-2019
+        /// Created Date : 16-July-2020
         /// Description : To fetch all users filtered by Store id
         /// </summary>
         /// <param name="StoreId"></param>
@@ -233,7 +233,7 @@ namespace PowerPackOnline.Web.Services
 
         /// <summary>
         /// Author : 
-        /// Created Date : 19-MAY-2019
+        /// Created Date : 19-July-2020
         /// Description : To search users by name
         /// </summary>
         /// <param name="name"></param>
