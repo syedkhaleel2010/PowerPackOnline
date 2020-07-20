@@ -199,7 +199,7 @@ namespace PowerPack.API.Repositories
         }
 
         /// <summary>
-        /// Author : 
+        /// Author :  
         /// Created Date : 19-July-2020
         /// Description : To fetch user by name
         /// </summary>
