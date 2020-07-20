@@ -12,7 +12,7 @@ CREATE TABLE [Admin].[UserRole](
 	[IsActive] [bit] NULL,
 	[IsEditable] [bit] NOT NULL,
 	[UserRoleXml] [xml] NULL,
-	[SchoolId] [bigint] NULL,
+	[StoreId] [bigint] NULL,
  CONSTRAINT [PK_UserRole] PRIMARY KEY CLUSTERED 
 (
 	[UserRoleId] ASC
@@ -108,7 +108,7 @@ GO
 
 CREATE TABLE [dbo].[Users](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[SchoolId] [bigint] NOT NULL,
+	[StoreId] [bigint] NOT NULL,
 	[UserTypeId] [int] NOT NULL,
 	[UserName] [nvarchar](max) NULL,
 	[FirstName] [nvarchar](150) NULL,
